@@ -14,7 +14,6 @@ const Home = () => {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
       </Head>
       <body className="bg-body h-screen text-white font-poppins">
         <Header />

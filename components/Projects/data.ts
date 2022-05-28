@@ -35,8 +35,8 @@ export const data = [
     },
     {
         title: "Github Finder", 
-        image: "/hello.avif",
-        link: "github-finder-sigma-ivory.vercel.app",
+        image: "/search.png",
+        link: "https://github-finder-sigma-ivory.vercel.app/",
         description: "A tool to search and fetch github usernames and repositories",
         tech: ["JavaScript", "HTML" , "CSS"],
     },

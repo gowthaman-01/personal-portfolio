@@ -14,7 +14,7 @@ const Projects = () => {
           {data.map((project) => (
             <div
               key={project.title}
-              className="flex project h-96 lg:h-72 overflow-hidden rounded-md relative hover:transform-gpu hover:scale-105 transition duration-300"
+              className="flex project h-96 lg:h-72 lg:w-[424px] overflow-hidden rounded-md relative hover:transform-gpu hover:scale-105 transition duration-300"
             >
               <a href={project?.link} target={"_blank"} rel="noreferrer">
                 <Image src={project.image} layout="fill" />

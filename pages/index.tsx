@@ -29,6 +29,16 @@ const Home = () => {
       <Links />
       <Experiences />
       <Contact />
+      <a
+        className="flex justify-center p-8 drop-shadow-sm"
+        href="https://github.com/gowthaman-01/personal-portfolio"
+        target={"_blank"}
+        rel="noreferrer"
+      >
+        <p className="hover:text-selected-text transition duration-500">
+          Made by Gowthaman
+        </p>
+      </a>
     </div>
   );
 };

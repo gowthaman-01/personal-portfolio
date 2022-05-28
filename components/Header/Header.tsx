@@ -11,7 +11,9 @@ const Header = ({
   return (
     <header className="py-6">
       <div className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-        <div className="text-lg font-bold">gowthaman</div>
+        <div className="text-lg font-bold hover:text-selected-text transition duration-300">
+          gowthaman
+        </div>
         <div className="hidden md:flex items-center">
           <a
             href="#"
@@ -35,12 +37,12 @@ const Header = ({
             Work
           </a>
           <a href="#contact" onClick={() => handleSection("Contact")}>
-            <button className="px-6 py-2 bg-theme font-bold rounded mr-8">
+            <button className="px-6 py-2 bg-theme font-bold rounded mr-8 hover:drop-shadow-blue transition duration-300">
               Contact
             </button>
           </a>
           <a href="resume.pdf" target={"_blank"}>
-            <button className="px-6 py-2 bg-nav font-bold rounded">
+            <button className="px-6 py-2 bg-nav font-bold rounded hover:drop-shadow-gray transition duration-300">
               Resume
             </button>
           </a>

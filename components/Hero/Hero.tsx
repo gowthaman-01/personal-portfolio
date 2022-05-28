@@ -40,7 +40,7 @@ const Hero = ({
           <div ref={element} className="text-theme"></div>
         </div>
         <a href="#projects" onClick={() => setCurrentSection("Projects")}>
-          <button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3 rounded">
+          <button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3 rounded hover:drop-shadow-blue transition duration-300">
             <div>
               <svg
                 width="22"

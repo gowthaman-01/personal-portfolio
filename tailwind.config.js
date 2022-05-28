@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      dropShadow: {
+        blue: "0 0px 12px rgb(63 63 255)",
+        gray: "0 0px 20px rgb(64 64 83)",
+        purple: "0 0px 10px  rgb(163 163 255)"
+      },
       colors: {
         'body': '#17171F',
         'selected-text': '#A3A3FF',

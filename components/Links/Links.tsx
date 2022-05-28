@@ -14,7 +14,7 @@ export const Links = () => {
             <span className="bg-black px-2 py-1 rounded-md mr-4 opacity-0">
               {item.name}
             </span>
-            <div className="w-7 h-7 relative">
+            <div className="w-7 h-7 relative hover:drop-shadow-blue transition duration-300">
               <Image src={item.image} alt="Man" layout="fill" />
             </div>
           </a>

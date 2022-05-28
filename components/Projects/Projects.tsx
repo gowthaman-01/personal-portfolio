@@ -24,7 +24,10 @@ const Projects = () => {
                   </p>
                   <div className="flex flex-wrap justify-center items-center mb-3 gap-x-3 gap-y-2">
                     {project.tech.map((item) => (
-                      <p className="text-sm px-5 py-1 bg-body rounded-2xl">
+                      <p
+                        key={item}
+                        className="text-sm px-5 py-1 bg-body rounded-2xl"
+                      >
                         {item}
                       </p>
                     ))}

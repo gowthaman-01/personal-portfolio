@@ -1,30 +1,34 @@
-import Head from "next/head";
-import { Header, Navbar, Hero, Projects } from "../components";
+import { useState } from "react";
+import {
+  Header,
+  Navbar,
+  Hero,
+  Projects,
+  Links,
+  Experiences,
+  Contact,
+} from "../components";
 
 const Home = () => {
+  const [currentSection, setCurrentSection] = useState("Home");
   return (
     <div>
-      <Head>
-        <title>Gowthaman</title>
-        <meta name="description" content="" />
-        <link rel="icon" href="/favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <body className="bg-body h-screen text-white font-poppins">
-        <Header />
-        <Navbar />
-        <div>
-          <Hero />
-        </div>
-        <div className="relative z-10">
-          <Projects />
-        </div>
-      </body>
+      <Header
+        currentSection={currentSection}
+        setCurrentSection={setCurrentSection}
+      />
+      <Navbar
+        currentSection={currentSection}
+        setCurrentSection={setCurrentSection}
+      />
+      <Hero
+        currentSection={currentSection}
+        setCurrentSection={setCurrentSection}
+      />
+      <Projects />
+      <Links />
+      <Experiences />
+      <Contact />
     </div>
   );
 };

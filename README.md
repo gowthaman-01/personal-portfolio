@@ -1,5 +1,5 @@
 ## My Portfolio website (In progress)
 
-![Screenshot](./public/assets/screenshot.gif)
+![Screenshot](./public/screenshot.png)
 
-Built using HTML, Tailwind CSS and vanilla javascript.
+Built using NextJS and Tailwind CSS.

@@ -38,16 +38,16 @@ const Home = () => {
       <Contact />
       {width < 1028 && <LinkMobile />}
       {width > 1028 && (
-        <a
-          className="flex justify-center p-4 drop-shadow-sm"
-          href="https://github.com/gowthaman-01/personal-portfolio"
-          target={"_blank"}
-          rel="noreferrer"
-        >
-          <p className="hover:text-selected-text transition duration-500">
+        <div className="flex justify-center p-4 drop-shadow-sm">
+          <a
+            className="hover:text-selected-text transition duration-500"
+            href="https://github.com/gowthaman-01/personal-portfolio"
+            rel="noreferrer"
+            target={"_blank"}
+          >
             Made by Gowthaman
-          </p>
-        </a>
+          </a>
+        </div>
       )}
     </div>
   );

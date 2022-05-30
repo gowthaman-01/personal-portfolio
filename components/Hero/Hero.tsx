@@ -12,9 +12,9 @@ const Hero = ({
   setCurrentSection: (section: string) => void;
   headerOpen: boolean;
 }) => {
+  const { width } = useWindowSize();
   const element = useRef<any>();
   const typed = useRef<Typed>();
-
   useEffect(() => {
     const options = {
       strings:
@@ -31,20 +31,8 @@ const Hero = ({
     return () => {
       typed?.current?.destroy();
     };
-  }, []);
-
-  const [width, setWidth] = useState<number>(0);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, [width]);
+
   return (
     <div className="flex justify-center pt-16 lg:pt-0 xl:-mt-4">
       <div className="my-8 md:my-36 xl:my-64 -ml-44 md:ml-8 lg:ml-4 xl:ml-24 2xl:mr-32 relative z-10">

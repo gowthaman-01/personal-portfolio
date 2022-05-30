@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { links } from "./data";
+import { desktopLinks } from "./data";
 export const LinkDesktop = () => {
   return (
-    <div className="lg:right-4 bottom-4 fixed">
-      {links.map((item) => (
+    <div className="lg:right-4 bottom-4 fixed z-40">
+      {desktopLinks.map((item) => (
         <div className="py-3" key={item.name}>
           <a
             className="links flex items-center justify-end"

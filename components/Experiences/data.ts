@@ -51,7 +51,7 @@ export const data = [
         company: "Seeds of Good Program", 
         tag1: "Programming fundamentals",
         tag2: "Scratch",
-        description: "• Taught programming to 50 primary and secondary school students using interactive web games built using Scratch."
+        description: "Taught programming to 50 primary and secondary school students using interactive web games built using Scratch."
     },    
     {
         image: "/engin.jpg", 

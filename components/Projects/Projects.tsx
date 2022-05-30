@@ -61,11 +61,11 @@ const Projects = () => {
                     <div onClick={toggle}>
                       <Image src={project.image} layout="fill" />
                       {showInfo && (
-                        <span className="bg-nav absolute opacity-0 p-4 w-full h-full">
-                          <p className="underline text-center text-lg md:text-xl mb-3 font-bold">
+                        <span className="bg-nav absolute opacity-0 p-4 md:p-16 w-full h-full">
+                          <p className="underline text-center text-lg md:text-xl mb-3 md:mb-6 font-bold">
                             {project.title}
                           </p>
-                          <div className="flex flex-wrap justify-center items-center mb-3 gap-x-3 gap-y-2">
+                          <div className="flex flex-wrap justify-center items-center mb-3 md:mb-6 gap-x-3 gap-y-2">
                             {project.tech.map((item) => (
                               <p
                                 key={item}

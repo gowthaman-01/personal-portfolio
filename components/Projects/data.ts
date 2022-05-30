@@ -15,7 +15,7 @@ export const data = [
     },
     {
         title: "Quizot", 
-        image: "/quiz.png",
+        image: "/quizot.png",
         link: "https://t.me/nantheman_bot",
         description: "Telegram bot that quizzes players on 101 trivia questions and tracks their progress using game points and rewards.",
         tech: ["Python", "Telegram API", "AWS"],
@@ -50,7 +50,7 @@ export const data = [
     },
     {
         title: "Medusa", 
-        image: "/snake.png",
+        image: "/medusa.png",
         link: "https://github.com/gowthaman-01/medusa",
         description: "Classic snake game which allows users to control the snake using keyboard inputs",
         tech: ["Pygame", "Python"],

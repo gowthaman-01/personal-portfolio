@@ -1,4 +1,4 @@
-const Header = ({
+const Desktop = ({
   currentSection,
   setCurrentSection,
 }: {
@@ -10,28 +10,28 @@ const Header = ({
   };
   return (
     <header className="py-6">
-      <div className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+      <div className="container flex justify-between items-center mx-auto px-8 md:px-8 lg:px-24 w-full">
         <div className="text-lg font-bold hover:text-selected-text transition duration-300">
           gowthaman
         </div>
-        <div className="hidden md:flex items-center">
+        <div className="flex items-center">
           <a
             href="#"
-            className="text-selected-text mr-12"
+            className="text-selected-text xl:mr-12 md:mr-8"
             onClick={() => handleSection("Home")}
           >
             Home
           </a>
           <a
             href="#projects"
-            className="hover:text-selected-text transition duration-200 mr-12"
+            className="hover:text-selected-text transition duration-200 xl:mr-12 md:mr-8"
             onClick={() => handleSection("Projects")}
           >
             Projects
           </a>
           <a
             href="#work"
-            className="hover:text-selected-text transition duration-200 mr-12"
+            className="hover:text-selected-text transition duration-200 xl:mr-12 md:mr-8"
             onClick={() => handleSection("Work")}
           >
             Work
@@ -66,4 +66,4 @@ const Header = ({
   );
 };
 
-export { Header };
+export default Desktop;

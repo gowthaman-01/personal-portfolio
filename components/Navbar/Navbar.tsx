@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { navbarData } from "./data";
+import { useWindowSize } from "usehooks-ts";
 const Navbar = ({
   currentSection,
   setCurrentSection,
@@ -7,8 +7,9 @@ const Navbar = ({
   currentSection: string;
   setCurrentSection: (section: string) => void;
 }) => {
+  const { width } = useWindowSize();
   return (
-    <div className="lg:w-4 fixed lg:ml-20 hidden xl:block">
+    <div className={width > 1028 ? "w-4 ml-12 xl:ml-20 block fixed" : "hidden"}>
       <div className="absolute transform -translate-x-1/2 space-y-5 mt-40">
         {navbarData.map((item) => (
           <a

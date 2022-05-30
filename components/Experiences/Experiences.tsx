@@ -13,10 +13,13 @@ export const Experiences = () => {
           {data.map((item) => (
             <div className="space-y-12 my-16" key={item.company}>
               <div className="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-                <div className={`mb-6 lg:mb-0 relative ${item.size}`}>
-                  <div className="h-full w-full">
-                    <Image src={item.image} layout="fill" />
-                  </div>
+                <div className="mb-6 lg:mb-0 relative w-[96px] h-[96px]">
+                  <Image
+                    src={item.image}
+                    layout="responsive"
+                    width={item?.width}
+                    height={item?.height}
+                  />
                 </div>
                 <div className="flex flex-wrap justify-center text-center lg:text-left lg:block w-full">
                   <h3 className="text-white text-3xl font-semibold">

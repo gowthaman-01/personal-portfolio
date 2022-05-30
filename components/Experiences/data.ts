@@ -1,7 +1,8 @@
 export const data = [
     {
         image: "/amd.svg", 
-        size: "w-[121px] h-[96px]",
+        width: "96px",
+        height: "96px",
         company: "Advanced Micro Devices (AMD)", 
         tag1: "Embedded Software",
         tag2: "Characterisation and Debugging",
@@ -9,7 +10,8 @@ export const data = [
     },
     {
         image: "/psyfinance.png", 
-        size: "w-[121px] h-[96px]",
+        width: "96px",
+        height: "96px",
         company: "PsyFinance", 
         tag1: "UI/UX",
         tag2: "Frontend development",
@@ -17,7 +19,8 @@ export const data = [
     },
     {
         image: "/nus.png", 
-        size: "w-[96px] h-[96px] mr-6",
+        width: "96px",
+        height: "115px",
         company: "Design and Make (Robotic Design)", 
         tag1: "Microcontroller Programming",
         tag2: "Engineering Design",
@@ -25,7 +28,8 @@ export const data = [
     },
     {
         image: "/bumblebee.png", 
-        size: "w-[121px] h-[96px]",
+        width: "96px",
+        height: "96px",
         company: "Bumblebee Autonomous Systems", 
         tag1: "Robot Operating System",
         tag2: "Maritime Robotics",
@@ -33,7 +37,8 @@ export const data = [
     },  
     {
         image: "/robomasters.jpg", 
-        size: "w-[121px] h-[96px]",
+        width: "96px",
+        height: "96px",
         company: "NUS Robomasters", 
         tag1: "STM32 Microcontroller Programming",
         tag2: "Robotic Design",
@@ -41,7 +46,8 @@ export const data = [
     },     
     {
         image: "/seeds.jpg", 
-        size: "w-[121px] h-[96px]",
+        width: "96px",
+        height: "96px",
         company: "Seeds of Good Program", 
         tag1: "Programming fundamentals",
         tag2: "Scratch",
@@ -49,7 +55,8 @@ export const data = [
     },    
     {
         image: "/engin.jpg", 
-        size: "w-[161px] h-[66px] -mr-7",
+        width: "96px",
+        height: "70px",
         company: "NUS Engineering Club", 
         tag1: "Leadership",
         tag2: "Event Planning",

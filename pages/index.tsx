@@ -1,18 +1,21 @@
 import { useState } from "react";
+import { useWindowSize } from "usehooks-ts";
 import {
   Header,
-  Navbar,
   Hero,
   Projects,
-  Links,
   Experiences,
   Contact,
+  LinkDesktop,
+  LinkMobile,
+  Navbar,
 } from "../components";
 
 const Home = () => {
+  const { width } = useWindowSize();
   const [currentSection, setCurrentSection] = useState("Home");
   return (
-    <div>
+    <div className="desktop">
       <Header
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
@@ -26,19 +29,22 @@ const Home = () => {
         setCurrentSection={setCurrentSection}
       />
       <Projects />
-      <Links />
+      {width > 1028 && <LinkDesktop />}
       <Experiences />
       <Contact />
-      <a
-        className="flex justify-center p-8 drop-shadow-sm"
-        href="https://github.com/gowthaman-01/personal-portfolio"
-        target={"_blank"}
-        rel="noreferrer"
-      >
-        <p className="hover:text-selected-text transition duration-500">
-          Made by Gowthaman
-        </p>
-      </a>
+      {width < 1028 && <LinkMobile />}
+      {width > 1028 && (
+        <a
+          className="flex justify-center p-4 drop-shadow-sm"
+          href="https://github.com/gowthaman-01/personal-portfolio"
+          target={"_blank"}
+          rel="noreferrer"
+        >
+          <p className="hover:text-selected-text transition duration-500">
+            Made by Gowthaman
+          </p>
+        </a>
+      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
-import gowthaman from "../../public/gowthaman.png";
+import gowthaman from "../../public/gowthaman.jpg";
 import { useWindowSize } from "usehooks-ts";
 const Hero = ({
   currentSection,

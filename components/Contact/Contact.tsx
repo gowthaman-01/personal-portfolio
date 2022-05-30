@@ -1,9 +1,14 @@
+import { useWindowSize } from "usehooks-ts";
 export const Contact = () => {
+  const { width } = useWindowSize();
   return (
-    <div className="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <div
+      className="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
+      id={width < 1028 ? "contact" : ""}
+    >
       <div className="w-full">
         <h2 className="secondary-title">Contact Me</h2>
-        <p id="contact" className="section-paragraph">
+        <p id={width > 1028 ? "contact" : ""} className="section-paragraph">
           Feel free to to contact me any time, through any method below.
         </p>
         <div className="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-12">

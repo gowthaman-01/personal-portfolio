@@ -9,7 +9,7 @@ const Navbar = ({
 }) => {
   const { width } = useWindowSize();
   return (
-    <div className={width > 1028 ? "w-4 ml-12 xl:ml-20 block fixed" : "hidden"}>
+    <div className={width > 1028 ? "w-4 ml-[55px]  block fixed" : "hidden"}>
       <div className="absolute transform -translate-x-1/2 space-y-5 mt-40">
         {navbarData.map((item) => (
           <a

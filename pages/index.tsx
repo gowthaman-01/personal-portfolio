@@ -14,11 +14,14 @@ import {
 const Home = () => {
   const { width } = useWindowSize();
   const [currentSection, setCurrentSection] = useState("Home");
+  const [headerOpen, setHeaderOpen] = useState(false);
   return (
     <div className="desktop">
       <Header
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
+        headerOpen={headerOpen}
+        setHeaderOpen={setHeaderOpen}
       />
       <Navbar
         currentSection={currentSection}
@@ -27,6 +30,7 @@ const Home = () => {
       <Hero
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
+        headerOpen={headerOpen}
       />
       <Projects />
       {width > 1028 && <LinkDesktop />}

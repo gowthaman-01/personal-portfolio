@@ -1,12 +1,17 @@
 import Image from "next/image";
 import { data } from "./data";
+import { useWindowSize } from "usehooks-ts";
 export const Experiences = () => {
+  const { width } = useWindowSize();
   return (
     <div>
-      <div className="container mt-28 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+      <div
+        className="container mt-28 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
+        id={width < 1028 ? "work" : ""}
+      >
         <div className="w-full">
           <h2 className="secondary-title">Work Experience</h2>
-          <p className="section-paragraph" id="work">
+          <p className="section-paragraph" id={width > 1028 ? "work" : ""}>
             I have worked at the following companies and organistaions and
             explored different areas of Software Development.
           </p>

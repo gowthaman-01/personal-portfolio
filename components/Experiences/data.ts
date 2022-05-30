@@ -56,7 +56,7 @@ export const data = [
     {
         image: "/engin.jpg", 
         width: "96px",
-        height: "70px",
+        height: "60px",
         company: "NUS Engineering Club", 
         tag1: "Leadership",
         tag2: "Event Planning",

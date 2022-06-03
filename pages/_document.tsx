@@ -6,6 +6,7 @@ export default function Document() {
       <Head>
         <meta property="og:title" content="gowthaman.app" />
         <meta property="og:image" content="https://i.imgur.com/JcxBZNI.png" />
+        <link rel="image_src" href="https://i.imgur.com/JcxBZNI.png" />
         <link rel="icon" type="image/x-icon" href="/favicon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter&display=optional"

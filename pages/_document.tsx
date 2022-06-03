@@ -11,6 +11,8 @@ export default function Document() {
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <meta property="og:title" content="gowthaman.app" />
+        <meta property="og:image" content="https://i.imgur.com/JcxBZNI.png" />
       </Head>
       <body className="bg-body text-white font-poppins">
         <Main />

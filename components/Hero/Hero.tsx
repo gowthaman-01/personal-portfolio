@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import gowthaman from "../../public/gowthaman.jpg";
 import { useWindowSize } from "usehooks-ts";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 const Hero = ({
   currentSection,
   setCurrentSection,
@@ -45,11 +46,20 @@ const Hero = ({
             <p ref={element} className="text-theme"></p>
           </div>
         </div>
-        <a href="#projects" onClick={() => setCurrentSection("Projects")}>
+        <a
+          href="#projects"
+          onClick={() => setCurrentSection("Projects")}
+          className="flex gap-6"
+        >
           <button className="px-4 py-2 md:px-8 md:py-4 bg-theme text-white font-bold mt-4 md:mt-8 flex items-center space-x-3 rounded hover:drop-shadow-blue transition duration-300">
             <Image src="/eye.svg" height={20} width={20} />
             <span>My Projects.</span>
           </button>
+          {width > 1028 && (
+            <div className="mt-10 animate-bounce opacity-0 xl:opacity-100 hover:drop-shadow-gray transition duration-300">
+              <BsFillArrowDownCircleFill size={50} color="rgb(63 63 255)" />
+            </div>
+          )}
         </a>
       </div>
       <div className="absolute md:relative w-[280px] h-[280px] md:w-[450px] md:h-[480px] lg:w-[550px] lg:h-[590px] xl:w-[750px] xl:h-[820px] 2xl:w-[830px] 2xl:h-[900px] ml-16 md:mt-16 md:-ml-20 -z-10">

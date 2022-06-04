@@ -6,3 +6,4 @@ export { Experiences } from "./Experiences/Experiences";
 export { Contact } from "./Contact/Contact";
 export { LinkDesktop } from "./Links/Desktop";
 export { LinkMobile } from "./Links/Mobile";
+export { Code } from "./Code/Code";

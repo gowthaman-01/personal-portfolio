@@ -46,7 +46,7 @@ export const Contact = () => {
         <p id={width > 1028 ? "contact" : ""} className="section-paragraph">
           Feel free to to contact me!
         </p>
-        <div className="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-12">
+        <div className="w-full grid gap-8 lg:gap-32 mt-12">
           <form onSubmit={handleSubmit}>
             <div>
               <label

@@ -12,8 +12,8 @@ export const Experiences = () => {
         <div className="w-full">
           <h2 className="secondary-title">Work Experience</h2>
           <p className="section-paragraph" id={width > 1028 ? "work" : ""}>
-            I have worked at the following companies and organistaions and
-            explored different areas of Software Development.
+            I have worked at the following companies and organisations while
+            exploring different areas of Software engineering and development.
           </p>
           {data.map((item) => (
             <div className="space-y-12 my-16" key={item.company}>

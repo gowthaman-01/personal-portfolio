@@ -2,7 +2,7 @@ import Image from "next/image";
 import { mobileLinks } from "./data";
 export const LinkMobile = () => {
   return (
-    <div className="bottom-4 p-10 flex justify-center items-center gap-8">
+    <div className="flex justify-center items-center gap-8">
       {mobileLinks.map((item) => (
         <div key={item.name}>
           <a

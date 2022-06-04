@@ -23,10 +23,17 @@ export const desktopLinks = [
         image: "/gmail.png",
         newTab: true,
     },
+    // {
+    //     name: "View Code",
+    //     link: "https://github.com/gowthaman-01/personal-portfolio",
+    //     image: "/code.png",
+    //     newTab: true,
+    // },
     {
         name: "+65 98366284",
         image: "/phone.png",
     },
+    
 ]
 
 export const mobileLinks = [
@@ -52,6 +59,12 @@ export const mobileLinks = [
         name: "Email",
         link: "mailto::gowthaman169@gmail.com",
         image: "/gmail.png",
+        newTab: true,
+    },
+    {
+        name: "Code",
+        link: "https://github.com/gowthaman-01/personal-portfolio",
+        image: "/code.png",
         newTab: true,
     },
 ]

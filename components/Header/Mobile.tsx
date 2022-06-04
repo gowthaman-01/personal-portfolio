@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import { data } from "./data";
-import { FaFilePdf } from "react-icons/fa";
+import { FaFilePdf, FaCode } from "react-icons/fa";
+import { LinkMobile } from "../Links/Mobile";
 
 const Mobile = ({
   headerOpen,
@@ -45,41 +46,62 @@ const Mobile = ({
         </div>
       </div>
       {headerOpen && (
-        <div className="px-8 pt-8 z-50 grid justify-items-end">
-          {data.map((item) => (
+        <>
+          <div className="px-8 pt-8 z-50 grid justify-items-end">
+            {data.map((item) => (
+              <a
+                className="text-xl mb-3 solid border w-36 rounded-md text-center py-2"
+                href={item.link}
+                onClick={headerClick}
+                key={item.title}
+              >
+                <div className="flex items-center pl-3">
+                  <div className="w-7 flex justify-center">
+                    <item.icon />
+                  </div>
+                  <div className="w-full flex justify-center">
+                    <p>{item.title}</p>
+                  </div>
+                </div>
+              </a>
+            ))}
             <a
               className="text-xl mb-3 solid border w-36 rounded-md text-center py-2"
-              href={item.link}
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
               onClick={headerClick}
-              key={item.title}
             >
               <div className="flex items-center pl-3">
                 <div className="w-7 flex justify-center">
-                  <item.icon />
+                  <FaFilePdf />
                 </div>
                 <div className="w-full flex justify-center">
-                  <p>{item.title}</p>
+                  <p>Resume</p>
                 </div>
               </div>
             </a>
-          ))}
-          <a
-            className="text-xl mb-3 solid border w-36 rounded-md text-center py-2"
-            href="/resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-            onClick={headerClick}
-          >
-            <div className="flex items-center pl-3">
-              <div className="w-7 flex justify-center">
-                <FaFilePdf />
+            <a
+              className="text-xl mb-3 solid border w-36 rounded-md text-center py-2"
+              href="https://github.com/gowthaman-01/personal-portfolio"
+              target="_blank"
+              rel="noreferrer"
+              onClick={headerClick}
+            >
+              <div className="flex items-center pl-3">
+                <div className="w-7 flex justify-center">
+                  <FaCode />
+                </div>
+                <div className="w-full flex justify-center">
+                  <p>Code</p>
+                </div>
               </div>
-              <div className="w-full flex justify-center">
-                <p>Resume</p>
-              </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
+          <div className="fixed left-1/2 bottom-0.5 w-full py-3 px-12 -translate-x-1/2 -translate-y-1/2 bg-secondary ">
+            <LinkMobile />
+          </div>
+        </>
       )}
     </header>
   );

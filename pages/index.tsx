@@ -37,7 +37,12 @@ const Home = () => {
       {width > 1028 && <LinkDesktop />}
       <Experiences />
       <Contact />
-      {width < 1028 && <LinkMobile />}
+      {width < 1028 && (
+        <div className="p-10">
+          <LinkMobile />
+        </div>
+      )}
+
       {width > 1028 && <Code />}
     </div>
   );

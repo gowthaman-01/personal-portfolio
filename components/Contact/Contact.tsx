@@ -60,7 +60,7 @@ export const Contact = () => {
                 id="name"
                 name="name"
                 required
-                className="w-full border rounded border-input-border bg-input px-4 py-4 mb-6 hover:border-white transition duration-300"
+                className="w-full border rounded border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
               />
             </div>
             <div>
@@ -75,7 +75,7 @@ export const Contact = () => {
                 id="email"
                 name="email"
                 required
-                className="w-full rounded border border-input-border bg-input px-4 py-4 mb-6 hover:border-white transition duration-300"
+                className="w-full rounded border border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
               />
             </div>
             <div>
@@ -90,12 +90,12 @@ export const Contact = () => {
                 id="message"
                 name="message"
                 required
-                className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 hover:border-white transition duration-300"
+                className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="px-6 py-2 bg-theme text-white font-bold rounded hover:drop-shadow-blue transition duration-300"
+              className="px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
             >
               Send!
             </button>

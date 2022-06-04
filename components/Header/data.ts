@@ -1,8 +1,8 @@
 import {
   FaHome,
-  FaCode,
   FaBriefcase,
   FaPhone,
+  FaTasks
 } from "react-icons/fa";
 export const data = [
     {
@@ -13,7 +13,7 @@ export const data = [
     {
         title: "Projects",
         link: "#projects", 
-        icon: FaCode,
+        icon: FaTasks,
     },
     {
         title: "Work",

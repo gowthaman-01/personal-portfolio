@@ -11,9 +11,12 @@ const Desktop = ({
   return (
     <header className="py-6">
       <div className="container flex justify-between items-center mx-auto px-8 md:px-8 lg:px-24 w-full">
-        <div className="text-lg font-bold hover:text-selected-text transition duration-300">
+        <a
+          className="text-lg font-bold hover:text-selected-text transition duration-300"
+          href="#"
+        >
           gowthaman
-        </div>
+        </a>
         <div className="flex items-center">
           <a
             href="#"

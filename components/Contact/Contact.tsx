@@ -60,7 +60,7 @@ export const Contact = () => {
                 id="name"
                 name="name"
                 required
-                className="w-full border border-input-border bg-input px-4 py-4 mb-6"
+                className="w-full border rounded border-input-border bg-input px-4 py-4 mb-6 hover:border-white transition duration-300"
               />
             </div>
             <div>
@@ -75,12 +75,12 @@ export const Contact = () => {
                 id="email"
                 name="email"
                 required
-                className="w-full border border-input-border bg-input px-4 py-4 mb-6"
+                className="w-full rounded border border-input-border bg-input px-4 py-4 mb-6 hover:border-white transition duration-300"
               />
             </div>
             <div>
               <label
-                className="text-white block mb-6 text-xl font-bold"
+                className="text-white block mb-6 text-xl font-bold "
                 htmlFor="message"
               >
                 Message
@@ -90,7 +90,7 @@ export const Contact = () => {
                 id="message"
                 name="message"
                 required
-                className="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6"
+                className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 hover:border-white transition duration-300"
               ></textarea>
             </div>
             <button

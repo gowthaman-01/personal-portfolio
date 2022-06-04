@@ -52,7 +52,7 @@ body {
 }
 
 .badge {
-  @apply px-4 py-2 text-sm rounded bg-badge;
+  @apply px-4 py-2 text-sm rounded bg-badge hover:scale-105 transition duration-200;
 }
 
 [id] {
@@ -108,4 +108,15 @@ body {
 .project:hover span {
   opacity: 0.9;
   transition-duration: 300ms;
+}
+
+.code:hover span {
+  opacity: 0.9;
+  transition-duration: 300ms;
+}
+
+.code:hover p {
+  @apply text-selected-text transition duration-300 drop-shadow-blue
+
+  
 }

@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Gowthaman</title>
-        <meta property="og:title" content="gowthaman.app" />
+        <title>Gowthaman Aravindan</title>
+        <meta property="og:title" content="Gowthaman Aravindan" />
         <meta property="og:image" content="https://i.imgur.com/JcxBZNI.png" />
       </Head>
       <Component {...pageProps} />

@@ -1,3 +1,4 @@
+import { Fade, Slide } from "react-awesome-reveal";
 import { useWindowSize } from "usehooks-ts";
 export const Contact = () => {
   const { width } = useWindowSize();
@@ -42,63 +43,76 @@ export const Contact = () => {
       id={width < 1028 ? "contact" : ""}
     >
       <div className="w-full">
-        <h2 className="secondary-title">Contact Me</h2>
-        <p id={width > 1028 ? "contact" : ""} className="section-paragraph">
-          Feel free to to contact me!
-        </p>
+        <Fade direction="left" triggerOnce>
+          <div>
+            <h2 className="secondary-title">Contact Me</h2>
+            <p id={width > 1028 ? "contact" : ""} className="section-paragraph">
+              Feel free to to contact me!
+            </p>
+          </div>
+        </Fade>
+
         <div className="w-full grid gap-8 lg:gap-32 mt-12">
           <form onSubmit={handleSubmit}>
-            <div>
-              <label
-                htmlFor="name"
-                className="text-white block mb-6 text-xl font-bold"
+            <Slide triggerOnce>
+              <div>
+                <label
+                  htmlFor="name"
+                  className="text-white block mb-6 text-xl font-bold"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full border rounded border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
+                />
+              </div>
+            </Slide>
+            <Slide triggerOnce>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="text-white block mb-6 text-xl font-bold"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full rounded border border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
+                />
+              </div>
+            </Slide>
+            <Slide triggerOnce>
+              <div>
+                <label
+                  className="text-white block mb-6 text-xl font-bold "
+                  htmlFor="message"
+                >
+                  Message
+                </label>
+                <textarea
+                  typeof="text"
+                  id="message"
+                  name="message"
+                  required
+                  className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
+                ></textarea>
+              </div>
+            </Slide>
+            <Fade triggerOnce>
+              <button
+                type="submit"
+                className="px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
               >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full border rounded border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="text-white block mb-6 text-xl font-bold"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full rounded border border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
-              />
-            </div>
-            <div>
-              <label
-                className="text-white block mb-6 text-xl font-bold "
-                htmlFor="message"
-              >
-                Message
-              </label>
-              <textarea
-                typeof="text"
-                id="message"
-                name="message"
-                required
-                className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
-            >
-              Send!
-            </button>
+                Send!
+              </button>
+            </Fade>
           </form>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { FC, useState } from "react";
+import { Fade } from "react-awesome-reveal";
 import { useWindowSize } from "usehooks-ts";
 import {
   Header,
@@ -28,19 +29,18 @@ const Home = () => {
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
-      <Hero
-        currentSection={currentSection}
-        setCurrentSection={setCurrentSection}
-        headerOpen={headerOpen}
-      />
+      <Hero setCurrentSection={setCurrentSection} />
+
       <Projects />
       {width > 1028 && <LinkDesktop />}
       <Experiences />
       <Contact />
       {width < 1028 && (
-        <div className="p-10">
-          <LinkMobile />
-        </div>
+        <Fade>
+          <div className="p-10">
+            <LinkMobile />
+          </div>
+        </Fade>
       )}
 
       {width > 1028 && <Code />}

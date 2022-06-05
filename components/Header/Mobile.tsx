@@ -51,7 +51,7 @@ const Mobile = ({
 
       {headerOpen && (
         <>
-          <Fade direction="right" duration={500}>
+          <Fade direction="right" duration={300}>
             <div className="px-8 pt-8 z-50 grid justify-items-end">
               {data.map((item) => (
                 <a
@@ -105,7 +105,7 @@ const Mobile = ({
             </div>
           </Fade>
           <div className="fixed left-1/2 bottom-0.5 w-full">
-            <Fade direction="up" duration={500}>
+            <Fade direction="up" duration={400}>
               <div className="py-3 px-12 -translate-x-1/2 -translate-y-1/2 bg-secondary ">
                 <LinkMobile />
               </div>

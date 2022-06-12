@@ -3,7 +3,7 @@ import { data } from "./data";
 import { useWindowSize } from "usehooks-ts";
 import { useEffect, useState } from "react";
 import { FaGlobe } from "react-icons/fa";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { useScrollDirection } from "react-use-scroll-direction";
 
 const Projects = () => {
@@ -24,7 +24,7 @@ const Projects = () => {
   return (
     <div className="container mt-2 md:-mt-16 mx-auto px-8 md:px-16 lg:px-24 w-full z-100">
       <div className="w-full">
-        <Fade direction="left" triggerOnce>
+        <Fade direction={width > 1028 ? "up" : "left"} triggerOnce>
           <h2 className="secondary-title" id={width < 1028 ? "projects" : ""}>
             My Projects
           </h2>
@@ -36,7 +36,7 @@ const Projects = () => {
         >
           {width > 1028
             ? data.map((project) => (
-                <Slide triggerOnce>
+                <Fade triggerOnce direction="up">
                   <div key={project.title}>
                     <div className="project md:w-[639px] md:h-[432px] lg:w-[400px] lg:h-[270px] xl:w-[355px] xl:h-[240px] 2xl:w-[440px] 2xl:h-[297px] overflow-hidden rounded-md relative hover:transform-gpu hover:scale-105 transition duration-300">
                       <a
@@ -67,7 +67,7 @@ const Projects = () => {
                       </a>
                     </div>
                   </div>
-                </Slide>
+                </Fade>
               ))
             : data.map((project) => (
                 <Fade direction="up" triggerOnce>

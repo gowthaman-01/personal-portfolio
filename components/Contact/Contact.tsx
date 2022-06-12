@@ -43,7 +43,7 @@ export const Contact = () => {
       id={width < 1028 ? "contact" : ""}
     >
       <div className="w-full">
-        <Fade direction="left" triggerOnce>
+        <Fade direction="up" triggerOnce>
           <div>
             <h2 className="secondary-title">Contact Me</h2>
             <p id={width > 1028 ? "contact" : ""} className="section-paragraph">
@@ -54,7 +54,7 @@ export const Contact = () => {
 
         <div className="w-full grid gap-8 lg:gap-32 mt-12">
           <form onSubmit={handleSubmit}>
-            <Slide triggerOnce>
+            <Fade direction="up" triggerOnce>
               <div>
                 <label
                   htmlFor="name"
@@ -70,8 +70,8 @@ export const Contact = () => {
                   className="w-full border rounded border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
                 />
               </div>
-            </Slide>
-            <Slide triggerOnce>
+            </Fade>
+            <Fade direction="up" triggerOnce>
               <div>
                 <label
                   htmlFor="email"
@@ -87,8 +87,8 @@ export const Contact = () => {
                   className="w-full rounded border border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
                 />
               </div>
-            </Slide>
-            <Slide triggerOnce>
+            </Fade>
+            <Fade direction="up" triggerOnce>
               <div>
                 <label
                   className="text-white block mb-6 text-xl font-bold "
@@ -104,8 +104,8 @@ export const Contact = () => {
                   className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
                 ></textarea>
               </div>
-            </Slide>
-            <Fade triggerOnce>
+            </Fade>
+            <Fade direction="up" triggerOnce>
               <button
                 type="submit"
                 className="px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"

@@ -105,7 +105,7 @@ export const Contact = () => {
                 ></textarea>
               </div>
             </Fade>
-            <Fade direction="up" triggerOnce>
+            <Fade direction="up" triggerOnce delay={450}>
               <button
                 type="submit"
                 className="px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"

@@ -11,7 +11,7 @@ export const Experiences = () => {
         id={width < 1028 ? "work" : ""}
       >
         <div className="w-full">
-          <Fade direction={width > 1028 ? "up" : "left"} triggerOnce>
+          <Fade direction={width > 1028 ? "up" : "up"} triggerOnce>
             <div>
               <h2 className="secondary-title">Work Experience</h2>
               <p className="section-paragraph" id={width > 1028 ? "work" : ""}>

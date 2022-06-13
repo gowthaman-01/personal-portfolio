@@ -24,11 +24,19 @@ const Projects = () => {
   return (
     <div className="container mt-2 md:-mt-16 mx-auto px-8 md:px-16 lg:px-24 w-full z-100">
       <div className="w-full">
-        <Fade direction={width > 1028 ? "up" : "left"} triggerOnce>
-          <h2 className="secondary-title" id={width < 1028 ? "projects" : ""}>
-            My Projects
-          </h2>
-        </Fade>
+        {width > 1028 ? (
+          <Fade direction="up" triggerOnce>
+            <h2 className="secondary-title" id={width < 1028 ? "projects" : ""}>
+              My Projects
+            </h2>
+          </Fade>
+        ) : (
+          <Fade delay={550} direction="down" triggerOnce>
+            <h2 className="secondary-title" id={width < 1028 ? "projects" : ""}>
+              My Projects
+            </h2>
+          </Fade>
+        )}
 
         <div
           className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-6 justify-items-center"

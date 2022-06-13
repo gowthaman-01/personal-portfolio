@@ -36,11 +36,9 @@ const Home = () => {
       <Experiences />
       <Contact />
       {width < 1028 && (
-        <Fade>
-          <div className="p-10">
-            <LinkMobile />
-          </div>
-        </Fade>
+        <div className="p-10">
+          <LinkMobile />
+        </div>
       )}
 
       {width > 1028 && <Code />}

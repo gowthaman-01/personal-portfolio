@@ -104,6 +104,7 @@ const Projects = () => {
                             <a
                               href={project.link}
                               className="absolute right-4 bottom-2 md:right-8 md:bottom-8 p-2 rounded-md border solid"
+                              target={"_blank"}
                             >
                               <div className="flex justify-center items-center gap-2">
                                 <FaGlobe />

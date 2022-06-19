@@ -81,7 +81,7 @@ const Projects = () => {
                 <Fade direction="up" triggerOnce key={project.title}>
                   <>
                     <div className="project w-[342px] h-[236px] md:w-[639px] md:h-[432px] relative rounded-md overflow-hidden">
-                      <div onClick={toggle} className="relative">
+                      <div onClick={toggle}>
                         <Image src={project.image} layout="fill" />
                         {showInfo && (
                           <span className="bg-nav absolute opacity-0 p-4 md:p-16 w-full h-full">

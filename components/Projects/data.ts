@@ -16,8 +16,8 @@ export const data = [
     {
         title: "Quizot", 
         image: "/quizot.png",
-        link: "https://t.me/nantheman_bot",
-        description: "Telegram bot that quizzes players on 101 trivia questions and tracks their progress using game points and rewards.",
+        link: "https://core.telegram.org/bots",
+        description: "Telegram bot that I made for my girlfriend when we were in a long distance relationship :)",
         tech: ["Python", "Telegram API", "AWS"],
     },
     {

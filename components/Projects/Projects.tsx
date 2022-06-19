@@ -44,8 +44,8 @@ const Projects = () => {
         >
           {width > 1028
             ? data.map((project) => (
-                <Fade triggerOnce direction="up">
-                  <div key={project.title}>
+                <Fade triggerOnce direction="up" key={project.title}>
+                  <>
                     <div className="project md:w-[639px] md:h-[432px] lg:w-[400px] lg:h-[270px] xl:w-[355px] xl:h-[240px] 2xl:w-[440px] 2xl:h-[297px] overflow-hidden rounded-md relative hover:transform-gpu hover:scale-105 transition duration-300">
                       <a
                         href={project?.link}
@@ -74,14 +74,14 @@ const Projects = () => {
                         </span>
                       </a>
                     </div>
-                  </div>
+                  </>
                 </Fade>
               ))
             : data.map((project) => (
-                <Fade direction="up" triggerOnce>
-                  <div key={project.title}>
+                <Fade direction="up" triggerOnce key={project.title}>
+                  <>
                     <div className="project w-[342px] h-[236px] md:w-[639px] md:h-[432px] relative rounded-md overflow-hidden">
-                      <div onClick={toggle}>
+                      <div onClick={toggle} className="relative">
                         <Image src={project.image} layout="fill" />
                         {showInfo && (
                           <span className="bg-nav absolute opacity-0 p-4 md:p-16 w-full h-full">
@@ -116,7 +116,7 @@ const Projects = () => {
                         )}
                       </div>
                     </div>
-                  </div>
+                  </>
                 </Fade>
               ))}
         </div>

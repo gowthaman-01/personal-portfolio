@@ -42,7 +42,10 @@ export const Experiences = () => {
                         {item.company}
                       </a>
                     </h3>
-                    <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
+                    <div className="font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2 flex justify-center w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
+                      {item.role}
+                    </div>
+                    <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 my-4">
                       <div className="badge">{item.tag1}</div>
                       <div className="badge">{item.tag2}</div>
                     </div>

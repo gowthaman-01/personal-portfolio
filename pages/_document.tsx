@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta property="og:title" content="gowthaman.app" />
+        <meta property="og:title" content="Gowthaman Aravindan" />
         <meta property="og:image" content="https://i.imgur.com/JcxBZNI.png" />
         <meta
           property="og:description"

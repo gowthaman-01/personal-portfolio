@@ -3,10 +3,10 @@ export const data = [
         image: "/amd.svg", 
         width: "96px",
         height: "96px",
-        company: "Advanced Micro Devices (AMD)", 
+        company: "Advanced Micro Devices (AMD) [INCOMING]", 
         tag1: "Embedded Software",
         tag2: "Characterisation and Debugging",
-        description: "Developed system software applications in Java and C++ for AMD’s Ryzen and Navi based Accelerated Processing Units.", 
+        description: "Develop system software applications in Java and C++ for AMD’s Ryzen and Navi based Accelerated Processing Units.", 
         link: "https://www.amd.com/en"
     },
     {
@@ -23,7 +23,7 @@ export const data = [
         image: "/nus.png", 
         width: "96px",
         height: "115px",
-        company: "Design and Make (Robotic Design)", 
+        company: "Robot Design Course",
         tag1: "Microcontroller Programming",
         tag2: "Engineering Design",
         description: "Guided students in a 12-week robot design and make course which exposed them to C++ micro-controller programming.",

@@ -1,41 +1,35 @@
 import { Fade, Slide } from "react-awesome-reveal";
 import { useWindowSize } from "usehooks-ts";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+
 export const Contact = () => {
   const { width } = useWindowSize();
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-
+    emailjs.init(process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY);
     const data = {
       name: event.target.name.value,
       email: event.target.email.value,
       message: event.target.message.value,
     };
-
-    // Send the data to the server in JSON format.
-    const JSONdata = JSON.stringify(data);
-
-    // API endpoint where we send form data.
-    const endpoint = "/api/mahtwog";
-
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
-
-    // Send the form data to our forms API on Vercel and get a response.
-    const response = await fetch(endpoint, options);
-
-    // Get the response data from server as JSON.
-    // If server returns the name submitted, that means the form works.
-    const result = await response.json();
-    alert("Thank you for reaching out!");
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
+        data,
+        process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY
+      )
+      .then((response) => {
+        alert("Thank you for reaching out!");
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((error) => {
+        alert(
+          "Error: Unable to send message. Please contact me directly at gowthaman169@gmail.com"
+        );
+        console.log(error);
+      });
   };
   return (
     <div
@@ -64,7 +58,6 @@ export const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  id="name"
                   name="name"
                   required
                   className="w-full border rounded border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
@@ -81,7 +74,6 @@ export const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  id="email"
                   name="email"
                   required
                   className="w-full rounded border border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
@@ -98,7 +90,6 @@ export const Contact = () => {
                 </label>
                 <textarea
                   typeof="text"
-                  id="message"
                   name="message"
                   required
                   className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"

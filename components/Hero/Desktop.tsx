@@ -34,7 +34,7 @@ const Desktop = ({
   return (
     <div className="flex justify-center pt-16 lg:pt-0 xl:-mt-4">
       <Fade triggerOnce direction="up">
-        <div className="my-8 md:my-36 xl:my-64 -ml-44 md:ml-8 lg:ml-4 xl:ml-24 2xl:mr-32 relative z-10">
+        <div className="my-8 md:my-36 xl:my-56 -ml-44 md:ml-8 lg:ml-4 xl:ml-24 2xl:mr-32 relative z-10">
           <div className="font-bold w-[170px] md:w-[250px] lg:w-[350px] text-3xl md:leading-10 md:text-[44px] lg:text-5xl xl:text-6xl 2xl:text-7xl">
             <div>
               <p className="hover:text-selected-text transition duration-300">

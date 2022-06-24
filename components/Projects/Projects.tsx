@@ -71,6 +71,9 @@ const Projects = () => {
                           <p className="text-center text-base">
                             {project.description}
                           </p>
+                          <p className="mt-2 text-center text-base">
+                            {project?.remarks}
+                          </p>
                         </span>
                       </a>
                     </div>

@@ -26,7 +26,7 @@ export const Contact = () => {
       })
       .catch((error) => {
         alert(
-          "Error: Unable to send message. Please contact me directly at gowthaman169@gmail.com"
+          "Error: Unable to send message. Please contact me directly at gowthaman.aravindan@gmail.com"
         );
         console.log(error);
       });
@@ -41,7 +41,8 @@ export const Contact = () => {
           <div>
             <h2 className="secondary-title">Contact Me</h2>
             <p id={width > 1028 ? "contact" : ""} className="section-paragraph">
-              Feel free to to contact me!
+              Feel free to to contact me at gowthaman.aravindan@gmail.com or
+              send in a message below!
             </p>
           </div>
         </Fade>

@@ -10,7 +10,7 @@ export const data = [
   {
     title: "Traiflix",
     image: "/traiflix.png",
-    link: "traiflix-git-main-gowthaman-01.vercel.app",
+    link: "https://traiflix-git-main-gowthaman-01.vercel.app",
     description:
       "Trailer streaming website for movies and shows using the TMBD API with payment and user subscription features.",
     remarks: " Email: demo@gmail.com | Password: demo1234",

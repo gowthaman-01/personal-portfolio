@@ -36,15 +36,18 @@ export const Experiences = () => {
                       />
                     </a>
                   </div>
-                  <div className="flex flex-wrap justify-center text-center lg:text-left lg:block w-full">
+                  <div className="text-center lg:text-left lg:block w-full">
                     <h3 className="text-white text-3xl font-semibold hover:text-selected-text transition duration-300">
                       <a target={"_blank"} rel="noreferrer" href={item.link}>
                         {item.company}
                       </a>
                     </h3>
-                    <div className="font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2 flex justify-center w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
-                      {item.role}
+                    <div className="flex justify-center lg:block">
+                      <div className="font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2  w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
+                        {item.role}
+                      </div>
                     </div>
+
                     <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 my-4">
                       <div className="badge">{item.tag1}</div>
                       <div className="badge">{item.tag2}</div>

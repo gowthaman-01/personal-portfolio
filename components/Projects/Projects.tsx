@@ -71,9 +71,11 @@ const Projects = () => {
                           <p className="text-center text-base">
                             {project.description}
                           </p>
-                          <p className="mt-2 text-center text-base">
-                            {project?.remarks}
-                          </p>
+                          {project.remarks && (
+                            <p className="mt-4 font-semibold text-center text-base border-[1px] border-white rounded-md py-1 border-solid">
+                              {project.remarks}
+                            </p>
+                          )}
                         </span>
                       </a>
                     </div>

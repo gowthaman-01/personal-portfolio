@@ -27,6 +27,7 @@ const Home = () => {
   }, [width, scrollDirection]);
   const [currentSection, setCurrentSection] = useState("Home");
   const [headerOpen, setHeaderOpen] = useState(false);
+  console.log(currentSection);
   return (
     <div className="desktop">
       <Header
@@ -39,14 +40,7 @@ const Home = () => {
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
-      <Waypoint
-        onEnter={() => setCurrentSection("Home")}
-        onLeave={() => setCurrentSection("Projects")}
-      >
-        <div>
-          <Hero setCurrentSection={setCurrentSection} />
-        </div>
-      </Waypoint>
+      <Hero setCurrentSection={setCurrentSection} />
       <Waypoint
         onEnter={() => setCurrentSection("Projects")}
         onLeave={() =>

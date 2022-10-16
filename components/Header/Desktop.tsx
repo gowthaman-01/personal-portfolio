@@ -7,9 +7,6 @@ const Desktop = ({
   currentSection: string;
   setCurrentSection: (section: string) => void;
 }) => {
-  const handleSection = (section: string): void => {
-    setCurrentSection(section);
-  };
   return (
     <Fade direction="down">
       <header className="py-6">
@@ -21,28 +18,22 @@ const Desktop = ({
             gowthaman
           </a>
           <div className="flex items-center">
-            <a
-              href="#"
-              className="text-selected-text xl:mr-12 md:mr-8"
-              onClick={() => handleSection("Home")}
-            >
+            <a href="#" className="text-selected-text xl:mr-12 md:mr-8">
               Home
             </a>
             <a
               href="#projects"
               className="hover:text-selected-text transition duration-200 xl:mr-12 md:mr-8"
-              onClick={() => handleSection("Projects")}
             >
               Projects
             </a>
             <a
               href="#work"
               className="hover:text-selected-text transition duration-200 xl:mr-12 md:mr-8"
-              onClick={() => handleSection("Work")}
             >
               Work
             </a>
-            <a href="#contact" onClick={() => handleSection("Contact")}>
+            <a href="#contact">
               <button className="px-6 py-2 bg-theme font-bold rounded mr-8 hover:drop-shadow-blue transition duration-300">
                 Contact
               </button>

@@ -1,11 +1,20 @@
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { useWindowSize } from "usehooks-ts";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useState } from "react";
+import { Oval } from "react-loader-spinner";
+import { Alert, IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import Grow from "@mui/material/Grow";
 
 export const Contact = () => {
   const { width } = useWindowSize();
+  const [loadingIndicator, setLoadingIndicator] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
+  const [success, setSuccess] = useState(false);
   const handleSubmit = async (event: any) => {
+    setShowMessage(false);
+    setLoadingIndicator(true);
     event.preventDefault();
     emailjs.init(process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY);
     const data = {
@@ -21,19 +30,21 @@ export const Contact = () => {
         process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY
       )
       .then((response) => {
-        alert("Thank you for reaching out!");
+        setLoadingIndicator(false);
+        setSuccess(true);
+        setShowMessage(true);
         console.log("SUCCESS!", response.status, response.text);
       })
       .catch((error) => {
-        alert(
-          "Error: Unable to send message. Please contact me directly at gowthaman.aravindan@gmail.com"
-        );
+        setLoadingIndicator(false);
+        setSuccess(false);
+        setShowMessage(true);
         console.log(error);
       });
   };
   return (
     <div
-      className="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
+      className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
       id={width < 1028 ? "contact" : ""}
     >
       <div className="w-full">
@@ -47,7 +58,7 @@ export const Contact = () => {
           </div>
         </Fade>
 
-        <div className="w-full grid gap-8 lg:gap-32 mt-12">
+        <div className="w-full grid gap-8 lg:gap-32">
           <form onSubmit={handleSubmit}>
             <Fade direction="up" triggerOnce>
               <div>
@@ -99,21 +110,97 @@ export const Contact = () => {
             </Fade>
             {width >= 768 ? (
               <Fade direction="up" triggerOnce delay={450}>
-                <button
-                  type="submit"
-                  className="px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
-                >
-                  Send!
-                </button>
+                <div>
+                  <button
+                    type="submit"
+                    className="mb-5 h-12 w-40 flex justify-center items-center gap-x-3 px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
+                  >
+                    {loadingIndicator ? "Sending" : "Send"}
+                    {loadingIndicator && (
+                      <Oval
+                        height={25}
+                        width={25}
+                        color="white"
+                        ariaLabel="oval-loading"
+                        secondaryColor="white"
+                        strokeWidth={5}
+                        strokeWidthSecondary={5}
+                      />
+                    )}
+                  </button>
+                  <div className="w-fit">
+                    <Grow in={showMessage}>
+                      <Alert
+                        variant="filled"
+                        severity={success ? "success" : "error"}
+                        action={
+                          <IconButton
+                            aria-label="close"
+                            color="inherit"
+                            size="small"
+                            onClick={() => {
+                              setShowMessage(false);
+                            }}
+                          >
+                            <CloseIcon fontSize="inherit" />
+                          </IconButton>
+                        }
+                      >
+                        <p className="text-[16px]">
+                          {success
+                            ? "Message sent successfully. Thanks for reaching out!"
+                            : "Error: Unable to send message. Please contact me directly at gowthaman.aravindan@gmail.com"}
+                        </p>
+                      </Alert>
+                    </Grow>
+                  </div>
+                </div>
               </Fade>
             ) : (
               <Fade triggerOnce>
-                <button
-                  type="submit"
-                  className="px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
-                >
-                  Send!
-                </button>
+                <div>
+                  <button
+                    type="submit"
+                    className="mb-5 h-12 flex justify-center items-center gap-x-3 px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
+                  >
+                    {loadingIndicator ? "Sending" : "Send"}
+                    {loadingIndicator && (
+                      <Oval
+                        height={25}
+                        width={25}
+                        color="white"
+                        ariaLabel="oval-loading"
+                        secondaryColor="white"
+                        strokeWidth={5}
+                        strokeWidthSecondary={5}
+                      />
+                    )}
+                  </button>
+                  <Grow in={showMessage}>
+                    <Alert
+                      variant="filled"
+                      severity={success ? "success" : "error"}
+                      action={
+                        <IconButton
+                          aria-label="close"
+                          color="inherit"
+                          size="small"
+                          onClick={() => {
+                            setShowMessage(false);
+                          }}
+                        >
+                          <CloseIcon fontSize="inherit" />
+                        </IconButton>
+                      }
+                    >
+                      <p className="text-[16px]">
+                        {success
+                          ? "Message sent successfully. Thanks for reaching out!"
+                          : "Error: Unable to send message. Please contact me directly at gowthaman.aravindan@gmail.com"}
+                      </p>
+                    </Alert>
+                  </Grow>
+                </div>
               </Fade>
             )}
           </form>

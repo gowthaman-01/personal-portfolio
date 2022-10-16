@@ -4,21 +4,10 @@ import { useWindowSize } from "usehooks-ts";
 import { useEffect, useState } from "react";
 import { FaGlobe } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
-import { useScrollDirection } from "react-use-scroll-direction";
 
 const Projects = () => {
   const { width } = useWindowSize();
   const [showInfo, setShowInfo] = useState(true);
-  const { scrollDirection } = useScrollDirection();
-  const [isScrollDown, setIsScrollDown] = useState(false);
-  useEffect(() => {
-    width > 480 ? setShowInfo(true) : setShowInfo(false);
-    if (scrollDirection === "DOWN") {
-      setIsScrollDown(true);
-    } else if (scrollDirection === "UP") {
-      setIsScrollDown(false);
-    }
-  }, [width, scrollDirection]);
   const toggle = () => width < 768 && setShowInfo(true);
 
   return (

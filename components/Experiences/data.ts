@@ -4,11 +4,11 @@ export const data = [
     width: "96px",
     height: "96px",
     company: "Advanced Micro Devices (AMD)",
-    role: "Software Developer Intern",
+    role: "Software Development Intern",
     tag1: "Embedded Software",
     tag2: "Characterisation and Debugging",
     description:
-      "System Software development on Ryzen/Navi based Accelerated Processing Unit platforms",
+      "Developed system level test programs in Java for AMD’s Enterprise chips, supporting their agile product development",
     link: "https://www.amd.com/en",
   },
   {
@@ -24,18 +24,6 @@ export const data = [
     link: "https://psyfi.io/",
   },
   {
-    image: "/nus.png",
-    width: "96px",
-    height: "115px",
-    company: "Robot Design Course",
-    role: "Teaching Assistant",
-    tag1: "Microcontroller Programming",
-    tag2: "Engineering Design",
-    description:
-      "Guided students in a 12-week robot design and make course which exposed them to C++ micro-controller programming.",
-    link: "https://nusmods.com/modules/EG1311/design-and-make",
-  },
-  {
     image: "/bumblebee.png",
     width: "96px",
     height: "96px",
@@ -46,6 +34,18 @@ export const data = [
     description:
       "Developed simulation environment for DJI drone using Python packages in a Linux based Robot Operating System.",
     link: "https://bumblebee.sg/",
+  },
+  {
+    image: "/nus.png",
+    width: "96px",
+    height: "115px",
+    company: "Robot Design Course",
+    role: "Teaching Assistant",
+    tag1: "Microcontroller Programming",
+    tag2: "Engineering Design",
+    description:
+      "Guided students in a 12-week robot design and make course which exposed them to C++ micro-controller programming.",
+    link: "https://nusmods.com/modules/EG1311/design-and-make",
   },
   {
     image: "/robomasters.jpg",

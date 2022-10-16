@@ -47,7 +47,7 @@ const Desktop = ({
                 Contact
               </button>
             </a>
-            <a href="/resume.pdf" target={"_blank"}>
+            <a href="/Gowthaman_Aravindan_Resume.pdf" target={"_blank"}>
               <button className="px-6 py-2 bg-nav font-bold rounded mr-8 hover:drop-shadow-gray transition duration-300">
                 Resume
               </button>

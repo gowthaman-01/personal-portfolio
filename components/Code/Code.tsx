@@ -2,7 +2,7 @@ import { Fade } from "react-awesome-reveal";
 
 const Code = () => {
   return (
-    <div className="xl:pt-10 lg:pt-4 pb-6 drop-shadow-sm flex justify-center items-center">
+    <div className="pb-6 drop-shadow-sm flex justify-center items-center">
       <Fade direction="up">
         <a
           href="https://github.com/gowthaman-01/personal-portfolio"

@@ -14,12 +14,7 @@ const Navbar = ({
       <Fade direction="left">
         <div className="absolute transform -translate-x-1/2 space-y-5 mt-40">
           {navbarData.map((item) => (
-            <a
-              key={item.title}
-              href={item.link}
-              onClick={() => setCurrentSection(item.title)}
-              className="nav-dot flex"
-            >
+            <a key={item.title} href={item.link} className="nav-dot flex">
               <div
                 className={`ml-24 block w-7 h-7 rounded-full border-4 border-nav bg-body transition ${
                   currentSection == item.title

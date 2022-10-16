@@ -1,5 +1,6 @@
-import { FC, useState } from "react";
-import { Fade } from "react-awesome-reveal";
+import { useEffect, useState } from "react";
+import { Waypoint } from "react-waypoint";
+import { useScrollDirection } from "react-use-scroll-direction";
 import { useWindowSize } from "usehooks-ts";
 import {
   Header,
@@ -14,7 +15,16 @@ import {
 } from "../components";
 
 const Home = () => {
+  const { scrollDirection } = useScrollDirection();
+  const [isScrollDown, setIsScrollDown] = useState(false);
   const { width } = useWindowSize();
+  useEffect(() => {
+    if (scrollDirection === "DOWN") {
+      setIsScrollDown(true);
+    } else if (scrollDirection === "UP") {
+      setIsScrollDown(false);
+    }
+  }, [width, scrollDirection]);
   const [currentSection, setCurrentSection] = useState("Home");
   const [headerOpen, setHeaderOpen] = useState(false);
   return (
@@ -29,12 +39,45 @@ const Home = () => {
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
-      <Hero setCurrentSection={setCurrentSection} />
-
-      <Projects />
+      <Waypoint
+        onEnter={() => setCurrentSection("Home")}
+        onLeave={() => setCurrentSection("Projects")}
+      >
+        <div>
+          <Hero setCurrentSection={setCurrentSection} />
+        </div>
+      </Waypoint>
+      <Waypoint
+        onEnter={() => setCurrentSection("Projects")}
+        onLeave={() =>
+          isScrollDown ? setCurrentSection("Work") : setCurrentSection("Home")
+        }
+      >
+        <div>
+          <Projects />
+        </div>
+      </Waypoint>
       {width > 1028 && <LinkDesktop />}
-      <Experiences />
-      <Contact />
+      <Waypoint
+        onEnter={() => setCurrentSection("Work")}
+        onLeave={() =>
+          isScrollDown
+            ? setCurrentSection("Contact")
+            : setCurrentSection("Projects")
+        }
+      >
+        <div>
+          <Experiences />
+        </div>
+      </Waypoint>
+      <Waypoint
+        onEnter={() => setCurrentSection("Contact")}
+        onLeave={() => setCurrentSection("Work")}
+      >
+        <div>
+          <Contact />
+        </div>
+      </Waypoint>
       {width < 1028 && (
         <div className="p-10">
           <LinkMobile />

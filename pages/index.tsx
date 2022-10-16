@@ -27,7 +27,6 @@ const Home = () => {
   }, [width, scrollDirection]);
   const [currentSection, setCurrentSection] = useState("Home");
   const [headerOpen, setHeaderOpen] = useState(false);
-  console.log(currentSection);
   return (
     <div className="desktop">
       <Header

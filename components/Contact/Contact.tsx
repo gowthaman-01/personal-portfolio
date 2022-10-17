@@ -44,7 +44,7 @@ export const Contact = () => {
   };
   return (
     <div
-      className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
+      className="container flex justify-between items-center mx-auto px-8 -mb-5 md:px-14 lg:px-24 w-full"
       id={width < 1028 ? "contact" : ""}
     >
       <div className="w-full">

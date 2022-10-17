@@ -25,7 +25,7 @@ export const Experiences = () => {
           {data.map((item) => (
             <Slide direction="up" triggerOnce key={item.company}>
               <div className="space-y-12 my-16" key={item.company}>
-                <div className="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+                <div className="w-full border border-nav p-12 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
                   <div className="mb-6 lg:mb-0 relative w-[96px] h-[96px] hover:drop-shadow-dim transition duration-300">
                     <a target={"_blank"} rel="noreferrer" href={item.link}>
                       <Image

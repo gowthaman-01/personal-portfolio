@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 const Code = () => {
   return (
     <div className="pb-6 drop-shadow-sm flex justify-center items-center">
-      <Fade direction="up">
+      <Fade direction="up" triggerOnce>
         <a
           href="https://github.com/gowthaman-01/personal-portfolio"
           rel="noreferrer"

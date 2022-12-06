@@ -26,7 +26,7 @@ export const Experiences = () => {
             <Slide direction="up" triggerOnce key={item.company}>
               <div className="space-y-12 my-16" key={item.company}>
                 <div className="w-full border border-nav p-12 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-                  <div className="mb-6 lg:mb-0 relative w-[96px] h-[96px] hover:drop-shadow-dim transition duration-300">
+                  <div className="mt-2 mb-6 lg:mb-0 relative w-[120px] h-[12    0px] hover:drop-shadow-dim transition duration-300">
                     <a target={"_blank"} rel="noreferrer" href={item.link}>
                       <Image
                         src={item.image}
@@ -47,11 +47,12 @@ export const Experiences = () => {
                         {item.role}
                       </div>
                     </div>
-
-                    <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 my-4">
-                      <div className="badge">{item.tag1}</div>
-                      <div className="badge">{item.tag2}</div>
-                    </div>
+                    {item.tag1 && (
+                      <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 my-4">
+                        <div className="badge">{item.tag1}</div>
+                        <div className="badge">{item.tag2}</div>
+                      </div>
+                    )}
                     <p className="text-secondary">{item.description}</p>
                   </div>
                 </div>

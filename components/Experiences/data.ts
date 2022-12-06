@@ -1,5 +1,25 @@
 export const data = [
   {
+    image: "/zendesk.png",
+    width: "124px",
+    height: "96px",
+    company: "Zendesk",
+    role: "Incoming Software Engineer Intern",
+    link: "https://www.kinexcs.com/",
+  },
+  {
+    image: "/kinexcs.svg",
+    width: "509px",
+    height: "99px",
+    company: "Kinexcs",
+    role: "Software Development Intern",
+    tag1: "iOS & Android Development",
+    tag2: "FullStack Development",
+    description:
+      "Part of a cross-functional agile team to develop high-performing, robust web/mobile and desktop applications.",
+    link: "https://www.kinexcs.com/",
+  },
+  {
     image: "/amd.svg",
     width: "96px",
     height: "96px",
@@ -74,7 +94,7 @@ export const data = [
   {
     image: "/engin.jpg",
     width: "96px",
-    height: "60px",
+    height: "50px",
     company: "NUS Engineering Club",
     role: "Vice Project Director",
     tag1: "Leadership",

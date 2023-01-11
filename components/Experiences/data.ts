@@ -4,7 +4,9 @@ export const data = [
     width: "124px",
     height: "96px",
     company: "Zendesk",
-    role: "Incoming Software Engineer Intern",
+    role: "Software Engineer Intern",
+    tag1: "Back-End Development",
+    tag2: "DevOps",
     link: "https://www.kinexcs.com/",
   },
   {
@@ -14,9 +16,9 @@ export const data = [
     company: "Kinexcs",
     role: "Software Development Intern",
     tag1: "iOS & Android Development",
-    tag2: "FullStack Development",
+    tag2: "Full Stack Development",
     description:
-      "Part of a cross-functional agile team to develop high-performing, robust web/mobile and desktop applications.",
+      "Worked on Full Stack development of Mobile Application in Flutter as well as building and testing APIs using Flask and Docker",
     link: "https://www.kinexcs.com/",
   },
   {
@@ -38,7 +40,7 @@ export const data = [
     company: "PsyFinance",
     role: "Software Engineer Intern",
     tag1: "UI/UX",
-    tag2: "Frontend development",
+    tag2: "Front `- End development",
     description:
       "Designed and developed web applications using ReactJS and TypeScript, optimised front-end performance through better state management and shipped new features to over 5000 users.",
     link: "https://psyfi.io/",

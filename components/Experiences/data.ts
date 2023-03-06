@@ -1,5 +1,15 @@
 export const data = [
   {
+    image: "/google.png",
+    width: "96px",
+    height: "96px",
+    company: "Google",
+    role: "Incoming Software Engineer Intern",
+    tag1: "Back-End Development",
+    tag2: "Infrastructure",
+    link: "https://www.google.com",
+  },
+  {
     image: "/zendesk.png",
     width: "124px",
     height: "96px",
@@ -7,7 +17,9 @@ export const data = [
     role: "Software Engineer Intern",
     tag1: "Back-End Development",
     tag2: "DevOps",
-    link: "https://www.kinexcs.com/",
+    description:
+      "Working on migrating Zendesk EC2 development environments to Kubernetes clusters",
+    link: "https://www.zendesk.com",
   },
   {
     image: "/kinexcs.svg",

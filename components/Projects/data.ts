@@ -17,12 +17,12 @@ export const data = [
     tech: ["TypeScript", "ReactJS", "TailwindCSS", "StripeSDK"],
   },
   {
-    title: "Quizot",
-    image: "/quizot.png",
-    link: "https://core.telegram.org/bots",
+    title: "Chatty",
+    image: "/chatty.png",
+    link: "https://github.com/gowthaman-01/chatty",
     description:
-      "Telegram bot that I made for my girlfriend when we were in a long distance relationship :)",
-    tech: ["Python", "Telegram API", "AWS"],
+      "Telegram bot that leverages OpenAI’s language model, ChatGPT to provide informative and contextually relevant responses to queries",
+    tech: ["Javascript", "Telegram API", "Heroku"],
   },
   {
     title: "TesLah",

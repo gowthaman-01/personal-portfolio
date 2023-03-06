@@ -17,20 +17,12 @@ export const data = [
     tech: ["TypeScript", "ReactJS", "TailwindCSS", "StripeSDK"],
   },
   {
-    title: "Chatty",
-    image: "/chatty.png",
-    link: "https://github.com/gowthaman-01/chatty",
+    title: "Sage :)",
+    image: "/sage.jpg",
+    link: "https://github.com/gowthaman-01/sage-bot",
     description:
-      "Telegram bot that leverages OpenAI’s language model, ChatGPT to provide informative and contextually relevant responses to queries",
-    tech: ["Javascript", "Telegram API", "Heroku"],
-  },
-  {
-    title: "TesLah",
-    image: "/teslah.png",
-    link: "https://teslah.vercel.app/",
-    description:
-      "A self-driving car simulation built by implementing driving mechanics, environment, sensors, and collision detection.",
-    tech: ["Machine learning", "JavaScript", "Nerual Networks", "HTML", "CSS"],
+      "Sage :) is a personal life assistant that I made for my girlfriend which helps her stay on top of your diet, offers conversations with ChatGPT, provides restaurant recommendations, and suggests games for us to play",
+    tech: ["JavaScript", "Telegram Bot", "Heroku"],
   },
   {
     title: "Imagify",
@@ -54,6 +46,14 @@ export const data = [
     description:
       "A chrome extension that helps you keep track of websites that you have read halfway in order to prevent tab clutter. This extension is helpful for students who are doing research and want a tool to save websites that they want to earn at another time.",
     tech: ["JavaScript", "Chrome Extension"],
+  },
+  {
+    title: "Chatty",
+    image: "/chatty.png",
+    link: "https://github.com/gowthaman-01/chatty",
+    description:
+      "Telegram bot that leverages OpenAI’s language model, ChatGPT to provide informative and contextually relevant responses to queries",
+    tech: ["Javascript", "Telegram API", "Heroku"],
   },
   {
     title: "Medusa",

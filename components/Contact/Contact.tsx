@@ -109,7 +109,7 @@ export const Contact = () => {
               </div>
             </Fade>
             {width >= 768 ? (
-              <Fade direction="up" triggerOnce delay={450}>
+              <Fade direction="up" triggerOnce>
                 <div>
                   <button
                     type="submit"

@@ -15,8 +15,8 @@ export const data = [
     height: "96px",
     company: "Zendesk",
     role: "Software Engineer Intern",
-    tag1: "Back-End Development",
-    tag2: "DevOps",
+    tag1: "DevOps",
+    tag2: "Back-End Development",
     description:
       "Working on migrating Zendesk EC2 development environments to Kubernetes clusters",
     link: "https://www.zendesk.com",
@@ -66,7 +66,7 @@ export const data = [
     tag1: "Robot Operating System",
     tag2: "Maritime Robotics",
     description:
-      "Developed simulation environment for DJI drone using Python packages in a Linux based Robot Operating System.",
+      "Designed autonomous underwater vehicles from the ground-up for research purposes & participation in competitions.",
     link: "https://bumblebee.sg/",
   },
   {
@@ -90,7 +90,7 @@ export const data = [
     tag1: "STM32 Microcontroller Programming",
     tag2: "Robotic Design",
     description:
-      "Adapted existing STM32 micro-controller code written in C and integrated it into sentry robot’s hardware using RTOS.",
+      "Adapted existing STM32 micro-controller code written in C++ and integrated it into sentry robot’s hardware using RTOS.",
     link: "https://nusrobomaster.com/",
   },
   {

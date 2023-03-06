@@ -20,7 +20,7 @@ const Projects = () => {
             </h2>
           </Fade>
         ) : (
-          <Fade delay={550} direction="down" triggerOnce>
+          <Fade delay={180} direction="up" triggerOnce>
             <h2 className="secondary-title" id={width < 1028 ? "projects" : ""}>
               My Projects
             </h2>

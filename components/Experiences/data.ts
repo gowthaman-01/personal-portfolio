@@ -52,7 +52,7 @@ export const data = [
     company: "PsyFinance",
     role: "Software Engineer Intern",
     tag1: "UI/UX",
-    tag2: "Front `- End development",
+    tag2: "Front-End development",
     description:
       "Designed and developed web applications using ReactJS and TypeScript, optimised front-end performance through better state management and shipped new features to over 5000 users.",
     link: "https://psyfi.io/",

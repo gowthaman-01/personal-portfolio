@@ -11,7 +11,7 @@ const Projects = () => {
   const toggle = () => width < 768 && setShowInfo(true);
 
   return (
-    <div className="container mt-2 md:-mt-[45px] mx-auto px-8 md:px-16 lg:px-24 w-full z-100">
+    <div className="container mt-2 md:-mt-[56px] mx-auto px-8 md:px-16 lg:px-24 w-full z-100">
       <div className="w-full">
         {width > 1028 ? (
           <Fade direction="up" triggerOnce>

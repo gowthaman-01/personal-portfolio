@@ -17,7 +17,7 @@ import {
 const Home = () => {
   const { scrollDirection } = useScrollDirection();
   const [isScrollDown, setIsScrollDown] = useState(false);
-  const { width } = useWindowSize();
+  const { width, height } = useWindowSize();
   useEffect(() => {
     if (scrollDirection === "DOWN") {
       setIsScrollDown(true);
@@ -39,7 +39,16 @@ const Home = () => {
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
-      <Hero setCurrentSection={setCurrentSection} />
+      {height > 980 ? (
+        <Waypoint onEnter={() => setCurrentSection("Projects")}>
+          <div>
+            <Hero setCurrentSection={setCurrentSection} />
+          </div>
+        </Waypoint>
+      ) : (
+        <Hero setCurrentSection={setCurrentSection} />
+      )}
+
       <Waypoint
         onEnter={() => setCurrentSection("Projects")}
         onLeave={() =>

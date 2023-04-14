@@ -43,7 +43,7 @@ export const Experiences = () => {
                       </a>
                     </h3>
                     <div className="flex justify-center lg:block">
-                      <div className="font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2  w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
+                      <div className="font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2 w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
                         {item.role}
                       </div>
                     </div>

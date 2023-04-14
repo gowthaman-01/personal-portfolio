@@ -5,8 +5,6 @@ export const data = [
     height: "96px",
     company: "Google",
     role: "Incoming Software Engineer Intern",
-    tag1: "Back-End Development",
-    tag2: "Infrastructure",
     link: "https://www.google.com",
   },
   {

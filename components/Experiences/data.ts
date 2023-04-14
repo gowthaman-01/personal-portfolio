@@ -113,6 +113,6 @@ export const data = [
     tag2: "Event Planning",
     description:
       "Led a team of 12 through the planning and execution of a 2-day orientation camp for over 200 incoming freshmen.",
-    link: "https://enginclub.com/",
+    link: "https://cde.nus.edu.sg/student-life/cde_club/engin-club/",
   },
 ];

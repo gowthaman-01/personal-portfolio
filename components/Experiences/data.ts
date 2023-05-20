@@ -4,7 +4,10 @@ export const data = [
     width: "96px",
     height: "96px",
     company: "Google",
-    role: "Incoming Software Engineer Intern",
+    tag1: "CI/CD",
+    tag2: "Semantic testing",
+    role: "Software Engineer Intern",
+    description: "Working on Google's internal tools to increase developer productivity",
     link: "https://www.google.com",
   },
   {
@@ -16,7 +19,7 @@ export const data = [
     tag1: "DevOps",
     tag2: "Back-End Development",
     description:
-      "Working on migrating Zendesk EC2 development environments to Kubernetes clusters",
+      "Working on migrating services to Kubernetes clusters, as well as implementing new mutations in a Java based GraphQL server",
     link: "https://www.zendesk.com",
   },
   {

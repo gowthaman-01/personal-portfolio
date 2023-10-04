@@ -7,8 +7,21 @@ export const data = [
     tag1: "CI/CD",
     tag2: "Semantic testing",
     role: "Software Engineer Intern",
-    description: "Working on Google's internal tools to increase developer productivity",
+    description:
+      "Interned with the Google Pay Client Infrastructure team and worked Google's internal tools to increase developer productivity",
     link: "https://www.google.com",
+  },
+  {
+    image: "/govtech.png",
+    width: "96px",
+    height: "96px",
+    company: "Govtech",
+    tag1: "Full-Stack",
+    tag2: "Search",
+    role: "Software Engineer Intern",
+    description:
+      "Working on improving the government's search engine, SearchSG",
+    link: "https://www.search.gov.sg/",
   },
   {
     image: "/zendesk.png",

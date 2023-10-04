@@ -13,7 +13,7 @@ export const data = [
     link: "https://traiflix-git-main-gowthaman-01.vercel.app",
     description:
       "Trailer streaming website for movies and shows using the TMBD API with payment and user subscription features.",
-    remarks: " Email: demo@gmail.com | Password: demo1234",
+    remarks: "Email: demo@gmail.com | Password: demo1234",
     tech: ["TypeScript", "ReactJS", "TailwindCSS", "StripeSDK"],
   },
   {

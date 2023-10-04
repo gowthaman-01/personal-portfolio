@@ -44,24 +44,24 @@ const Projects = () => {
                       >
                         <Image src={project.image} layout="fill" />
                         <span className="bg-nav absolute opacity-0 rounded p-4 h-full">
-                          <p className="underline text-center text-xl mb-3 font-bold">
+                          <p className="underline text-center text-base mb-3 font-bold">
                             {project.title}
                           </p>
                           <div className="flex flex-wrap justify-center items-center mb-3 gap-x-3 gap-y-2">
                             {project.tech.map((item) => (
                               <p
                                 key={item}
-                                className="text-base px-5 py-1 bg-body rounded-2xl"
+                                className="text-sm px-5 py-1 bg-body rounded-2xl"
                               >
                                 {item}
                               </p>
                             ))}
                           </div>
-                          <p className="text-center text-base">
+                          <p className="text-center text-sm">
                             {project.description}
                           </p>
                           {project.remarks && (
-                            <p className="mt-4 font-semibold text-center text-base border-[1px] border-white rounded-md py-1 border-solid">
+                            <p className="mt-2 font-semibold text-center text-[13px] border-[1px] border-white rounded-md py-1 border-solid">
                               {project.remarks}
                             </p>
                           )}

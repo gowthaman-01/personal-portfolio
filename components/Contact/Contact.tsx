@@ -48,134 +48,77 @@ export const Contact = () => {
       id={width < 1028 ? "contact" : ""}
     >
       <div className="w-full">
-        <Fade direction="up" triggerOnce>
-          <div>
-            <h2 className="secondary-title">Contact Me</h2>
-            <p id={width > 1028 ? "contact" : ""} className="section-paragraph">
-              Feel free to to contact me at gowthaman.aravindan@gmail.com or
-              send in a message below!
-            </p>
-          </div>
-        </Fade>
-
+        <div>
+          <h2 className="secondary-title">Contact Me</h2>
+          <p id={width > 1028 ? "contact" : ""} className="section-paragraph">
+            Feel free to to contact me at gowthaman.aravindan@gmail.com or send
+            in a message below!
+          </p>
+        </div>
         <div className="w-full grid gap-8 lg:gap-32">
           <form onSubmit={handleSubmit}>
-            <Fade direction="up" triggerOnce>
-              <div>
-                <label
-                  htmlFor="name"
-                  className="text-white block mb-6 text-xl font-bold"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="w-full border rounded border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
-                />
-              </div>
-            </Fade>
-            <Fade direction="up" triggerOnce>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="text-white block mb-6 text-xl font-bold"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full rounded border border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
-                />
-              </div>
-            </Fade>
-            <Fade direction="up" triggerOnce>
-              <div>
-                <label
-                  className="text-white block mb-6 text-xl font-bold "
-                  htmlFor="message"
-                >
-                  Message
-                </label>
-                <textarea
-                  typeof="text"
-                  name="message"
-                  required
-                  className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
-                ></textarea>
-              </div>
-            </Fade>
+            <div>
+              <label
+                htmlFor="name"
+                className="text-white block mb-6 text-xl font-bold"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                required
+                className="w-full border rounded border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="text-white block mb-6 text-xl font-bold"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full rounded border border-input-border bg-input px-4 py-4 mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
+              />
+            </div>
+            <div>
+              <label
+                className="text-white block mb-6 text-xl font-bold "
+                htmlFor="message"
+              >
+                Message
+              </label>
+              <textarea
+                typeof="text"
+                name="message"
+                required
+                className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
+              ></textarea>
+            </div>
             {width >= 768 ? (
-              <Fade direction="up" triggerOnce>
-                <div>
-                  <button
-                    type="submit"
-                    className="mb-5 h-12 w-40 flex justify-center items-center gap-x-3 px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
-                  >
-                    {loadingIndicator ? "Sending" : "Send"}
-                    {loadingIndicator && (
-                      <Oval
-                        height={25}
-                        width={25}
-                        color="white"
-                        ariaLabel="oval-loading"
-                        secondaryColor="white"
-                        strokeWidth={5}
-                        strokeWidthSecondary={5}
-                      />
-                    )}
-                  </button>
-                  <div className="w-fit">
-                    <Grow in={showMessage}>
-                      <Alert
-                        variant="filled"
-                        severity={success ? "success" : "error"}
-                        action={
-                          <IconButton
-                            aria-label="close"
-                            color="inherit"
-                            size="small"
-                            onClick={() => {
-                              setShowMessage(false);
-                            }}
-                          >
-                            <CloseIcon fontSize="inherit" />
-                          </IconButton>
-                        }
-                      >
-                        <p className="text-[16px]">
-                          {success
-                            ? "Message sent successfully. Thanks for reaching out!"
-                            : "Error: Unable to send message. Please contact me directly at gowthaman.aravindan@gmail.com"}
-                        </p>
-                      </Alert>
-                    </Grow>
-                  </div>
-                </div>
-              </Fade>
-            ) : (
-              <Fade triggerOnce>
-                <div>
-                  <button
-                    type="submit"
-                    className="mb-5 h-12 flex justify-center items-center gap-x-3 px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
-                  >
-                    {loadingIndicator ? "Sending" : "Send"}
-                    {loadingIndicator && (
-                      <Oval
-                        height={25}
-                        width={25}
-                        color="white"
-                        ariaLabel="oval-loading"
-                        secondaryColor="white"
-                        strokeWidth={5}
-                        strokeWidthSecondary={5}
-                      />
-                    )}
-                  </button>
+              <div>
+                <button
+                  type="submit"
+                  className="mb-5 h-12 w-40 flex justify-center items-center gap-x-3 px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
+                >
+                  {loadingIndicator ? "Sending" : "Send"}
+                  {loadingIndicator && (
+                    <Oval
+                      height={25}
+                      width={25}
+                      color="white"
+                      ariaLabel="oval-loading"
+                      secondaryColor="white"
+                      strokeWidth={5}
+                      strokeWidthSecondary={5}
+                    />
+                  )}
+                </button>
+                <div className="w-fit">
                   <Grow in={showMessage}>
                     <Alert
                       variant="filled"
@@ -201,7 +144,51 @@ export const Contact = () => {
                     </Alert>
                   </Grow>
                 </div>
-              </Fade>
+              </div>
+            ) : (
+              <div>
+                <button
+                  type="submit"
+                  className="mb-5 h-12 flex justify-center items-center gap-x-3 px-6 py-2 bg-theme text-white font-bold rounded hover:outline-none hover:drop-shadow-blue transition duration-300"
+                >
+                  {loadingIndicator ? "Sending" : "Send"}
+                  {loadingIndicator && (
+                    <Oval
+                      height={25}
+                      width={25}
+                      color="white"
+                      ariaLabel="oval-loading"
+                      secondaryColor="white"
+                      strokeWidth={5}
+                      strokeWidthSecondary={5}
+                    />
+                  )}
+                </button>
+                <Grow in={showMessage}>
+                  <Alert
+                    variant="filled"
+                    severity={success ? "success" : "error"}
+                    action={
+                      <IconButton
+                        aria-label="close"
+                        color="inherit"
+                        size="small"
+                        onClick={() => {
+                          setShowMessage(false);
+                        }}
+                      >
+                        <CloseIcon fontSize="inherit" />
+                      </IconButton>
+                    }
+                  >
+                    <p className="text-[16px]">
+                      {success
+                        ? "Message sent successfully. Thanks for reaching out!"
+                        : "Error: Unable to send message. Please contact me directly at gowthaman.aravindan@gmail.com"}
+                    </p>
+                  </Alert>
+                </Grow>
+              </div>
             )}
           </form>
         </div>

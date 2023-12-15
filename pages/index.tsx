@@ -25,7 +25,7 @@ const Home = () => {
       setIsScrollDown(false);
     }
   }, [width, scrollDirection]);
-  const [currentSection, setCurrentSection] = useState("Home");
+  const [currentSection, setCurrentSection] = useState("Projects");
   const [headerOpen, setHeaderOpen] = useState(false);
   return (
     <div className="desktop">
@@ -51,9 +51,7 @@ const Home = () => {
 
       <Waypoint
         onEnter={() => setCurrentSection("Projects")}
-        onLeave={() =>
-          isScrollDown ? setCurrentSection("Work") : setCurrentSection("Home")
-        }
+        onLeave={() => isScrollDown && setCurrentSection("Work")}
       >
         <div>
           <Projects />

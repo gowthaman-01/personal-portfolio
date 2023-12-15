@@ -1,8 +1,4 @@
-const navbarDataLarge = [
-  {
-    link: "#",
-    title: "Home",
-  },
+const navbarData = [
   {
     link: "#projects",
     title: "Projects",
@@ -17,19 +13,4 @@ const navbarDataLarge = [
   },
 ];
 
-const navbarDataSmall = [
-  {
-    link: "#projects",
-    title: "Projects",
-  },
-  {
-    link: "#work",
-    title: "Work",
-  },
-  {
-    link: "#contact",
-    title: "Contact",
-  },
-];
-
-export { navbarDataLarge, navbarDataSmall };
+export { navbarData };

@@ -13,11 +13,14 @@ import {
   Navbar,
   Code,
 } from "../components";
+import Head from "next/head";
 
 const Home = () => {
   const { scrollDirection } = useScrollDirection();
   const [isScrollDown, setIsScrollDown] = useState(false);
   const { width, height } = useWindowSize();
+  const description =
+    "Check out my personal website to explore a range of software development projects and my professional experiences with leading tech companies and organizations.";
   useEffect(() => {
     if (scrollDirection === "DOWN") {
       setIsScrollDown(true);
@@ -29,6 +32,10 @@ const Home = () => {
   const [headerOpen, setHeaderOpen] = useState(false);
   return (
     <div className="desktop">
+      <Head>
+        <title>{`Gowthaman Aravindan`}</title>
+        <meta name="description" content={description} />
+      </Head>
       <Header
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}

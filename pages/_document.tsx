@@ -8,9 +8,8 @@ export default function Document() {
         <meta property="og:image" content="https://i.imgur.com/JcxBZNI.png" />
         <meta
           property="og:description"
-          content="I am a penultimate engineering student at NUS, majoring in Computer Science. I am currently interning Zendesk as a Software Engineer Intern! 
-          Here is my personal website - you can view projects I have worked on as well as my experiences in different companies 
-          and organisations in the field of software development."
+          content="Check out my personal website to explore a range of software development projects and my professional 
+          experiences with leading tech companies and organizations."
         />
         <link rel="image_src" href="https://i.imgur.com/JcxBZNI.png" />
         <link rel="icon" type="image/x-icon" href="/favicon.png" />

@@ -1,4 +1,4 @@
-## My Portfolio website (In progress)
+## My Portfolio website
 
 ![Screenshot](./public/screenshot.png)
 

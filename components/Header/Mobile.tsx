@@ -72,7 +72,7 @@ const Mobile = ({
               ))}
               <a
                 className="text-xl mb-3 solid border w-36 rounded-md text-center py-2"
-                href="/Gowthaman_Aravindan_Resume.pdf"
+                href="/Gowthaman-Aravindan-Resume.pdf"
                 target="_blank"
                 rel="noreferrer"
                 onClick={headerClick}

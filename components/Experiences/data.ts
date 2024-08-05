@@ -8,7 +8,7 @@ export const data = [
     tag2: "Semantic testing",
     role: "Software Engineer Intern",
     description:
-      "Interned with the Google Pay Client Infrastructure team and worked Google's internal tools to increase developer productivity",
+      "Interned with the Google Pay Client Infrastructure team to enhance developer productivity by creating tools for UI change visualizations within pull requests.",
     link: "https://www.google.com",
   },
   {
@@ -20,7 +20,7 @@ export const data = [
     tag2: "Search",
     role: "Software Engineer Intern",
     description:
-      "Working on improving the government's search engine, SearchSG",
+      "Contributed to enhancements in the government's SearchSG engine by refining features and improving system responsiveness.",
     link: "https://www.search.gov.sg/",
   },
   {
@@ -32,7 +32,7 @@ export const data = [
     tag1: "DevOps",
     tag2: "Back-End Development",
     description:
-      "Working on migrating services to Kubernetes clusters, as well as implementing new mutations in a Java based GraphQL server",
+      "Facilitated the transition of Zendesk services from AWS EC2 to Kubernetes, enhancing scalability and service reliability, and augmented a Java-based GraphQL server with new functionalities.",
     link: "https://www.zendesk.com",
   },
   {
@@ -44,7 +44,7 @@ export const data = [
     tag1: "iOS & Android Development",
     tag2: "Full Stack Development",
     description:
-      "Worked on Full Stack development of Mobile Application in Flutter as well as building and testing APIs using Flask and Docker",
+      "Engaged in full stack development for a mobile health application using Flutter and Flask, including API development and testing with Docker-enhanced workflows.",
     link: "https://www.kinexcs.com/",
   },
   {
@@ -56,7 +56,7 @@ export const data = [
     tag1: "Embedded Software",
     tag2: "Characterisation and Debugging",
     description:
-      "Developed system level test programs in Java for AMD’s Enterprise chips, supporting their agile product development",
+      "Developed Java-based system-level test programs for AMD's Enterprise chips, supporting agile product development cycles and improving chip performance.",
     link: "https://www.amd.com/en",
   },
   {
@@ -68,7 +68,7 @@ export const data = [
     tag1: "UI/UX",
     tag2: "Front-End development",
     description:
-      "Designed and developed web applications using ReactJS and TypeScript, optimised front-end performance through better state management and shipped new features to over 5000 users.",
+      "Designed and implemented user-centric web applications using ReactJS and TypeScript, significantly enhancing front-end performance and user engagement for over 5000 active users.",
     link: "https://psyfi.io/",
   },
   {
@@ -80,7 +80,7 @@ export const data = [
     tag1: "Robot Operating System",
     tag2: "Maritime Robotics",
     description:
-      "Designed autonomous underwater vehicles from the ground-up for research purposes & participation in competitions.",
+      "Engineered autonomous underwater vehicles from scratch, focusing on design and functionality to excel in research initiatives and competitive environments.",
     link: "https://bumblebee.sg/",
   },
   {
@@ -92,8 +92,8 @@ export const data = [
     tag1: "Microcontroller Programming",
     tag2: "Engineering Design",
     description:
-      "Guided students in a 12-week robot design and make course which exposed them to C++ micro-controller programming.",
-    link: "https://nusmods.com/modules/EG1311/design-and-make",
+      "Guided university students through a comprehensive 12-week robotics design course, focusing on microcontroller programming with Arduino and fostering hands-on engineering skills.",
+    link: "https://cde.nus.edu.sg/student-life/cde_club/engin-club/",
   },
   {
     image: "/robomasters.jpg",
@@ -104,7 +104,7 @@ export const data = [
     tag1: "STM32 Microcontroller Programming",
     tag2: "Robotic Design",
     description:
-      "Adapted existing STM32 micro-controller code written in C++ and integrated it into sentry robot’s hardware using RTOS.",
+      "Enhanced robotic capabilities by adapting STM32 microcontroller code for integration with hardware, utilizing RTOS for optimal performance.",
     link: "https://nusrobomaster.com/",
   },
   {
@@ -116,7 +116,7 @@ export const data = [
     tag1: "Programming fundamentals",
     tag2: "Scratch",
     description:
-      "Taught programming to 50 primary and secondary school students using interactive web games built using Scratch.",
+      "Instructed primary and secondary school students in the fundamentals of programming, using Scratch to create interactive web games that fostered a foundational understanding of coding concepts.",
     link: "https://www.nus.edu.sg/alumnet/thealumnus/issue-118/community/oar-highlights/planting-seeds-of-good",
   },
   {
@@ -128,7 +128,7 @@ export const data = [
     tag1: "Leadership",
     tag2: "Event Planning",
     description:
-      "Led a team of 12 through the planning and execution of a 2-day orientation camp for over 200 incoming freshmen.",
+      "Led the planning and execution of a two-day orientation camp for over 200 engineering freshmen, coordinating a team of 12 to ensure a smooth and engaging experience for new students.",
     link: "https://cde.nus.edu.sg/student-life/cde_club/engin-club/",
   },
 ];

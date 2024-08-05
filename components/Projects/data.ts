@@ -4,7 +4,7 @@ export const data = [
     image: "/secand.png",
     link: "https://github.com/gowthaman-01/secand",
     description:
-      "E-commerce platform to sell second-hand items, with features such as cart, product search, checkout, and payment.",
+      "E-commerce platform dedicated to selling second-hand items, featuring a robust suite of functionalities including a shopping cart, product search, secure checkout, and integrated payment systems.",
     tech: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Redux", "PayPal SDK"],
   },
   {
@@ -12,31 +12,32 @@ export const data = [
     image: "/traiflix.png",
     link: "https://traiflix-git-main-gowthaman-01.vercel.app",
     description:
-      "Trailer streaming website for movies and shows using the TMBD API with payment and user subscription features.",
+      "Streaming platform for movie and show trailers, leveraging the TMDB API, with integrated payment and subscription management features.",
     remarks: "Email: demo@gmail.com | Password: demo1234",
     tech: ["TypeScript", "ReactJS", "TailwindCSS", "StripeSDK"],
   },
   {
-    title: "Sage :)",
-    image: "/sage.jpg",
-    link: "https://github.com/gowthaman-01/sage-bot",
+    title: "PathViz",
+    image: "/pathviz.png",
+    link: "https://graphsim.vercel.app/",
     description:
-      "Sage :) is a personal life assistant that I made for my girlfriend which helps her stay on top of your diet, offers conversations with ChatGPT, provides restaurant recommendations, and suggests games for us to play",
-    tech: ["JavaScript", "Telegram Bot", "Heroku"],
+      "Web-based application that visualizes and compares various shortest path algorithms to enhance educational understanding of algorithmic concepts among students.",
+    tech: ["TypeScript", "CSS", "HTML"],
   },
   {
     title: "Imagify",
     image: "/MEME.png",
     link: "https://meme-generator-ten-sable.vercel.app/",
     description:
-      "Engine that generates meme images from the ImgFlip API and allows users to type top and bottom text captions.",
+      "Meme generator engine that utilizes the ImgFlip API, enabling users to craft memes with customizable top and bottom text captions.",
     tech: ["ReactJS", "JavaScript", "HTML", "CSS"],
   },
   {
     title: "Github Finder",
     image: "/search.png",
     link: "https://github-finder-sigma-ivory.vercel.app/",
-    description: "A tool to search and fetch github usernames and repositories",
+    description:
+      "User-friendly tool to efficiently search and retrieve GitHub usernames and repositories, enhancing developer productivity.",
     tech: ["JavaScript", "HTML", "CSS"],
   },
   {
@@ -44,15 +45,15 @@ export const data = [
     image: "/reater.png",
     link: "https://reater.vercel.app/",
     description:
-      "A chrome extension that helps you keep track of websites that you have read halfway in order to prevent tab clutter. This extension is helpful for students who are doing research and want a tool to save websites that they want to earn at another time.",
-    tech: ["JavaScript", "Chrome Extension"],
+      "Chrome extension that allows students and researchers to mark and save webpages they have read partially, helping manage and reduce tab clutter effectively.",
+    tech: ["JavaScript", "Chrome Extensions"],
   },
   {
     title: "Chatty",
     image: "/chatty.png",
     link: "https://github.com/gowthaman-01/chatty",
     description:
-      "Telegram bot that leverages OpenAI’s language model, ChatGPT to provide informative and contextually relevant responses to queries",
+      "Telegram bot that integrates OpenAI's ChatGPT to provide responses that are both informative and contextually relevant.",
     tech: ["Javascript", "Telegram API", "Heroku"],
   },
   {
@@ -60,7 +61,7 @@ export const data = [
     image: "/medusa.png",
     link: "https://github.com/gowthaman-01/medusa",
     description:
-      "Classic snake game which allows users to control the snake using keyboard inputs",
+      "A modern take on the classic snake game, enabling user control through keyboard inputs and providing a nostalgic yet refreshed gaming experience.",
     tech: ["Pygame", "Python"],
   },
   {
@@ -68,7 +69,7 @@ export const data = [
     image: "/ant.jpg",
     link: "/ant.pdf",
     description:
-      "Built an autonomous robot that navigates through a maze and fires at an infrared target using a flywheel based shooter. Utilized ROS and implemented python scripts in a Linux environment to program the firing mechanism, achieving a 90% accuracy.",
+      "Autonomous robot capable of navigating mazes and targeting using a flywheel shooter, programmed in C++ and Python within a ROS framework, with a 90% target accuracy.",
     tech: ["C++", "Python", "ROS"],
   },
   {
@@ -76,7 +77,7 @@ export const data = [
     image: "/rover.png",
     link: "https://github.com/gowthaman-01/opportunity-Rover",
     description:
-      "Implemented Arudino microcontroller code for an all-terrain rover using C++ achieving full marks during a graded run of the obstacle course.",
+      "All-terrain rover controlled via an Arduino microcontroller, successfully navigating obstacles and achieving top marks in a competitive course.",
     tech: ["C++", "Arduino", "Microcontroller programming", "CAD"],
   },
   {
@@ -84,7 +85,7 @@ export const data = [
     image: "/chuck.png",
     link: "https://chuck-norris-alpha.vercel.app",
     description:
-      "A chuck norris joke generator which uses an API to fetch jokes from the chuck norris database and displays it on a webpage",
+      "Chuck Norris joke generator that pulls content from an external API to entertain users with random jokes.",
     remarks: "* Not working as API has an invalid certificate *",
     tech: ["API", "JavaScript", "HTML"],
   },
@@ -93,7 +94,7 @@ export const data = [
     image: "/litodo.png",
     link: "https://github.com/gowthaman-01/litodo",
     description:
-      "IOS To-do App built using Swift and MacinCloud. The app features priority levels for todo items, motivational quotes as well as customizable app themes",
+      "iOS To-do app that supports prioritization of tasks, offers daily motivational quotes, and features customizable themes.",
     tech: ["Swift", "MacinCloud", "Core Data"],
   },
 ];

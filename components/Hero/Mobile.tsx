@@ -50,7 +50,7 @@ const Mobile = ({
               ></p>
             </div>
           </div>
-          <a
+          {/* <a
             href="#projects"
             onClick={() => setCurrentSection("Projects")}
             className="flex gap-6"
@@ -64,7 +64,7 @@ const Mobile = ({
                 <BsFillArrowDownCircleFill size={50} color="rgb(63 63 255)" />
               </div>
             )}
-          </a>
+          </a> */}
         </div>
       </Fade>
 

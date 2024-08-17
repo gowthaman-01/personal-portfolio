@@ -11,10 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="https://i.imgur.com/JcxBZNI.png" />
         <meta
           property="og:description"
-          content="I am a penultimate engineering student at NUS, majoring in Computer Science. I am currently interning Zendesk as a Software Engineer Intern! 
-          Here is my personal website - you can view projects I have worked on as well as my experiences in different companies 
-          and organisations in the field of software development."
+          content="Check out my personal website to explore innovative software projects and dive into my professional journey with top tech companies"
         />
+        <meta property="og:url" content="https://gowthaman.app" />
+        <meta property="og:type" content="website" />
       </Head>
       <Component {...pageProps} />
     </>

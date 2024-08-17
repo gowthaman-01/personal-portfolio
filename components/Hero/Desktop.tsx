@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import gowthaman from "../../public/gowthaman.jpg";
 import { useWindowSize } from "usehooks-ts";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { Fade } from "react-awesome-reveal";
 const Desktop = ({
   setCurrentSection,
@@ -57,7 +56,7 @@ const Desktop = ({
             className="flex gap-6"
           >
             <button className="px-4 py-2 md:px-8 md:py-4 bg-theme text-white font-bold mt-4 md:mt-8 flex items-center space-x-3 rounded hover:drop-shadow-blue transition duration-300">
-              <Image src="/eye.svg" height={20} width={20} />
+              <Image src="/eye.svg" height={20} width={20} alt="Eye icon" />
               <span>View My Projects.</span>
             </button>
             {/* {width > 1028 && (

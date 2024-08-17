@@ -42,7 +42,7 @@ const Mobile = ({
               </button>
             ) : (
               <button className="h-6 w-6 relative" onClick={headerClick}>
-                <Image src="/nav.svg" layout="fill" />
+                <Image src="/nav.svg" layout="fill" alt="Hamburger icon" />
               </button>
             )}
           </div>

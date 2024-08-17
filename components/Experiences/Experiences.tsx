@@ -33,6 +33,7 @@ export const Experiences = () => {
                         layout="responsive"
                         width={item?.width}
                         height={item?.height}
+                        alt={item.company}
                       />
                     </a>
                   </div>

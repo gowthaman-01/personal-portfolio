@@ -1,4 +1,3 @@
-import { Fade } from "react-awesome-reveal";
 import { useWindowSize } from "usehooks-ts";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
@@ -93,7 +92,6 @@ export const Contact = () => {
                 Message
               </label>
               <textarea
-                typeof="text"
                 name="message"
                 required
                 className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"

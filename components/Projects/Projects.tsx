@@ -42,7 +42,11 @@ const Projects = () => {
                         rel="noreferrer"
                         onClick={toggle}
                       >
-                        <Image src={project.image} layout="fill" />
+                        <Image
+                          src={project.image}
+                          layout="fill"
+                          alt={project.title}
+                        />
                         <span className="bg-nav absolute opacity-0 rounded p-4 h-full">
                           <p className="underline text-center text-base mb-3 font-bold">
                             {project.title}
@@ -76,7 +80,11 @@ const Projects = () => {
                   <>
                     <div className="project w-[342px] h-[236px] md:w-[639px] md:h-[432px] relative rounded-md overflow-hidden">
                       <div onClick={toggle}>
-                        <Image src={project.image} layout="fill" />
+                        <Image
+                          src={project.image}
+                          layout="fill"
+                          alt={project.title}
+                        />
                         {showInfo && (
                           <span className="bg-nav absolute opacity-0 p-4 md:p-16 w-full h-full">
                             <p className="underline text-center text-lg md:text-xl mb-3 md:mb-6 font-bold">
@@ -99,6 +107,7 @@ const Projects = () => {
                               href={project.link}
                               className="absolute right-4 bottom-2 md:right-8 md:bottom-8 p-2 rounded-md border solid"
                               target={"_blank"}
+                              rel="noreferrer"
                             >
                               <div className="flex justify-center items-center gap-2">
                                 <FaGlobe />

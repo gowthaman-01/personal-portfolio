@@ -3,8 +3,7 @@ import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import gowthaman from "../../public/gowthaman.jpg";
 import { useWindowSize } from "usehooks-ts";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 const Mobile = ({
   setCurrentSection,
 }: {

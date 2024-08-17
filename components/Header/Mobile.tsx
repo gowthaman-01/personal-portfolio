@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useState } from "react";
 import { data } from "./data";
 import { FaFilePdf, FaCode } from "react-icons/fa";
 import { LinkMobile } from "../Links/Mobile";
@@ -42,7 +41,7 @@ const Mobile = ({
               </button>
             ) : (
               <button className="h-6 w-6 relative" onClick={headerClick}>
-                <Image src="/nav.svg" layout="fill" />
+                <Image src="/nav.svg" layout="fill" alt="Hamburger icon" />
               </button>
             )}
           </div>

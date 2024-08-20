@@ -17,11 +17,11 @@ export const data = [
     tech: ["TypeScript", "ReactJS", "TailwindCSS", "StripeSDK"],
   },
   {
-    title: "PathViz",
-    image: "/pathviz.png",
-    link: "https://graphsim.vercel.app/",
+    title: "Pathium",
+    image: "/pathium.png",
+    link: "https://pathium.gowthaman.app/",
     description:
-      "Web-based application that visualizes and compares various shortest path algorithms to enhance educational understanding of algorithmic concepts among students.",
+      "A sophisticated simulation tool to visualise shortest path algorithms.",
     tech: ["TypeScript", "CSS", "HTML"],
   },
   {

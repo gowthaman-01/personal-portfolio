@@ -4,7 +4,7 @@ export const data = [
     image: "/secand.png",
     link: "https://github.com/gowthaman-01/secand",
     description:
-      "E-commerce platform dedicated to selling second-hand items, featuring a robust suite of functionalities including a shopping cart, product search, secure checkout, and integrated payment systems.",
+      "E-commerce platform dedicated to selling second-hand items including secure checkout and integrated payment systems.",
     tech: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Redux", "PayPal SDK"],
   },
   {

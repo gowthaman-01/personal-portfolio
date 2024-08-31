@@ -7,6 +7,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Gowthaman Aravindan</title>
+        <meta
+          name="description"
+          content="Check out my personal website to explore innovative software projects and dive into my professional journey with top tech companies"
+        />
         <meta property="og:title" content="Gowthaman Aravindan" />
         <meta property="og:image" content="https://i.imgur.com/JcxBZNI.png" />
         <meta

@@ -1,5 +1,13 @@
 export const data = [
   {
+    title: "Pathium",
+    image: "/pathium.png",
+    link: "https://pathium.gowthaman.app/",
+    description:
+      "A sophisticated simulation tool to visualise shortest path algorithms.",
+    tech: ["TypeScript", "CSS", "HTML"],
+  },
+  {
     title: "Secand",
     image: "/secand.png",
     link: "https://github.com/gowthaman-01/secand",
@@ -15,14 +23,6 @@ export const data = [
       "Streaming platform for movie and show trailers, leveraging the TMDB API, with integrated payment and subscription management features.",
     remarks: "Email: demo@gmail.com | Password: demo1234",
     tech: ["TypeScript", "ReactJS", "TailwindCSS", "StripeSDK"],
-  },
-  {
-    title: "Pathium",
-    image: "/pathium.png",
-    link: "https://pathium.gowthaman.app/",
-    description:
-      "A sophisticated simulation tool to visualise shortest path algorithms.",
-    tech: ["TypeScript", "CSS", "HTML"],
   },
   {
     title: "Imagify",

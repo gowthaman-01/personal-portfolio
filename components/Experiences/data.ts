@@ -9,7 +9,7 @@ export const data = [
     role: "Software Engineer Intern",
     description:
       "Interned with the Google Pay Client Infrastructure team to enhance developer productivity by creating tools for UI change visualizations within pull requests.",
-    link: "https://www.google.com",
+    link: "https://about.google/intl/ALL_in/",
   },
   {
     image: "/govtech.png",
@@ -33,7 +33,7 @@ export const data = [
     tag2: "Back-End Development",
     description:
       "Facilitated the transition of Zendesk services from AWS EC2 to Kubernetes, enhancing scalability and service reliability, and augmented a Java-based GraphQL server with new functionalities.",
-    link: "https://www.zendesk.com",
+    link: "https://www.zendesk.com/in/service/messaging/",
   },
   {
     image: "/kinexcs.svg",
@@ -57,7 +57,7 @@ export const data = [
     tag2: "Characterisation and Debugging",
     description:
       "Developed Java-based system-level test programs for AMD's Enterprise chips, supporting agile product development cycles and improving chip performance.",
-    link: "https://www.amd.com/en",
+    link: "https://www.amd.com/en/products/processors/server/epyc.html",
   },
   {
     image: "/psyfinance.png",
@@ -69,7 +69,7 @@ export const data = [
     tag2: "Front-End development",
     description:
       "Designed and implemented user-centric web applications using ReactJS and TypeScript, significantly enhancing front-end performance and user engagement for over 5000 active users.",
-    link: "https://psyfi.io/",
+    link: "https://app.psyfi.io/",
   },
   {
     image: "/bumblebee.png",
@@ -93,7 +93,7 @@ export const data = [
     tag2: "Engineering Design",
     description:
       "Guided university students through a comprehensive 12-week robotics design course, focusing on microcontroller programming with Arduino and fostering hands-on engineering skills.",
-    link: "https://cde.nus.edu.sg/student-life/cde_club/engin-club/",
+    link: "https://nusmods.com/courses/EG1311/design-and-make",
   },
   {
     image: "/robomasters.jpg",
@@ -129,6 +129,6 @@ export const data = [
     tag2: "Event Planning",
     description:
       "Led the planning and execution of a two-day orientation camp for over 200 engineering freshmen, coordinating a team of 12 to ensure a smooth and engaging experience for new students.",
-    link: "https://cde.nus.edu.sg/student-life/cde_club/engin-club/",
+    link: "https://www.nuscdeclub.com/about-us",
   },
 ];

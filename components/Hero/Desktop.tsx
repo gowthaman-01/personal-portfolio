@@ -55,11 +55,10 @@ const Desktop = ({
             onClick={() => setCurrentSection("Projects")}
             className="flex gap-6"
           >
-            {/* <button className="px-4 py-2 md:px-8 md:py-4 bg-theme text-white font-bold mt-4 md:mt-8 flex items-center space-x-3 rounded hover:drop-shadow-blue transition duration-300">
-              <Image src="/eye.svg" height={20} width={20} alt="Eye icon" />
-              <span> Projects</span>
-            </button> */}
-            {/* {width > 1028 && (
+            <button className="px-4 py-2 md:px-8 md:py-4 bg-theme text-white font-bold mt-4 md:mt-8 flex items-center space-x-3 rounded hover:drop-shadow-blue transition duration-300">
+              <span>View Projects</span>
+            </button>
+            {/* {/* {width > 1028 && (
               <div className="mt-10 animate-bounce opacity-0 xl:opacity-100 hover:drop-shadow-gray transition duration-300">
                 <BsFillArrowDownCircleFill size={50} color="rgb(63 63 255)" />
               </div>

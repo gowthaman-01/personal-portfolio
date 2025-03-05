@@ -71,7 +71,6 @@ const Home = () => {
       </Waypoint>
       {width > 1028 && <LinkDesktop />}
       <Waypoint
-        onEnter={() => setCurrentSection("Work")}
         onLeave={() =>
           isScrollDown
             ? setCurrentSection("Contact")

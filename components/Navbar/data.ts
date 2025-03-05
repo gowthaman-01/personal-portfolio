@@ -1,5 +1,9 @@
 const navbarData = [
   {
+    link: "#",
+    title: "Home",
+  },
+  {
     link: "#projects",
     title: "Projects",
   },

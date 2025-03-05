@@ -13,7 +13,7 @@ const Navbar = ({
   return (
     <div className={width > 1028 ? "w-4 ml-[55px]  block fixed" : "hidden"}>
       <Fade direction="left">
-        <div className="absolute transform -translate-x-1/2 space-y-5 mt-40">
+        <div className="absolute transform -translate-x-1/2 space-y-5 mt-64">
           {navbarData.map((item) => (
             <a key={item.title} href={item.link} className="nav-dot flex">
               <div

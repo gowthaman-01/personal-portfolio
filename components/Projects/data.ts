@@ -41,28 +41,12 @@ export const data = [
     tech: ["JavaScript", "HTML", "CSS"],
   },
   {
-    title: "Reater",
-    image: "/reater.png",
-    link: "https://reater.vercel.app/",
-    description:
-      "Chrome extension that allows students and researchers to mark and save webpages they have read partially, helping manage and reduce tab clutter effectively.",
-    tech: ["JavaScript", "Chrome Extensions"],
-  },
-  {
     title: "Chatty",
     image: "/chatty.png",
     link: "https://github.com/gowthaman-01/chatty",
     description:
       "Telegram bot that integrates OpenAI's ChatGPT to provide responses that are both informative and contextually relevant.",
     tech: ["Javascript", "Telegram API", "Heroku"],
-  },
-  {
-    title: "Medusa",
-    image: "/medusa.png",
-    link: "https://github.com/gowthaman-01/medusa",
-    description:
-      "A modern take on the classic snake game, enabling user control through keyboard inputs and providing a nostalgic yet refreshed gaming experience.",
-    tech: ["Pygame", "Python"],
   },
   {
     title: "A.N.T",
@@ -79,15 +63,6 @@ export const data = [
     description:
       "All-terrain rover controlled via an Arduino microcontroller, successfully navigating obstacles and achieving top marks in a competitive course.",
     tech: ["C++", "Arduino", "Microcontroller programming", "CAD"],
-  },
-  {
-    title: "Chuck Norris",
-    image: "/chuck.png",
-    link: "https://chuck-norris-alpha.vercel.app",
-    description:
-      "Chuck Norris joke generator that pulls content from an external API to entertain users with random jokes.",
-    remarks: "* Not working as API has an invalid certificate *",
-    tech: ["API", "JavaScript", "HTML"],
   },
   {
     title: "Litodo",

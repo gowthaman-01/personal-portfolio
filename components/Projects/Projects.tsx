@@ -16,15 +16,20 @@ const Projects = () => {
         {width > 1028 ? (
           <Fade direction="up" triggerOnce>
             <h2 className="secondary-title" id={width < 1028 ? "projects" : ""}>
-              My Projects
+              Projects
             </h2>
           </Fade>
         ) : (
-          <Fade delay={400} triggerOnce>
-            <h2 className="secondary-title" id={width < 1028 ? "projects" : ""}>
-              My Projects
-            </h2>
-          </Fade>
+          <div className="ml-3">
+            <Fade delay={400} triggerOnce>
+              <h2
+                className="secondary-title"
+                id={width < 1028 ? "projects" : ""}
+              >
+                Projects
+              </h2>
+            </Fade>
+          </div>
         )}
 
         <div

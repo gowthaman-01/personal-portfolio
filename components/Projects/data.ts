@@ -4,25 +4,24 @@ export const data = [
     image: "/pathium.png",
     link: "https://pathium.gowthaman.app/",
     description:
-      "A sophisticated simulation tool to visualise shortest path algorithms.",
+      "Real-time, terrain-aware visualizer enabling side-by-side execution of A*, Dijkstra’s, and BFS on weighted grids via a custom traversal engine.",
     tech: ["TypeScript", "CSS", "HTML"],
   },
   {
-    title: "Secand",
-    image: "/secand.png",
-    link: "https://github.com/gowthaman-01/secand",
+    title: "Taskium",
+    image: "/taskium.png",
+    link: "https://github.com/gowthaman-01/taskium",
     description:
-      "E-commerce platform dedicated to selling second-hand items including secure checkout and integrated payment systems.",
-    tech: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Redux", "PayPal SDK"],
+      "Lock-based thread pool with mutex guarded queues, condition-variable signaling, and RAII managed lifecycles for concurrent task dispatch.",
+    tech: ["C++", "Concurrency", "RAII"],
   },
   {
-    title: "Traiflix",
-    image: "/traiflix.png",
-    link: "https://traiflix-git-main-gowthaman-01.vercel.app",
+    title: "Pystring",
+    image: "/pystring.png",
+    link: "https://github.com/gowthaman-01/pystring",
     description:
-      "Streaming platform for movie and show trailers, leveraging the TMDB API, with integrated payment and subscription management features.",
-    remarks: "Email: demo@gmail.com | Password: demo1234",
-    tech: ["TypeScript", "ReactJS", "TailwindCSS", "StripeSDK"],
+      "Lightweight library bringing pythonic string manipulation (range-based slicing, negative indexing) to C++, enabling cleaner text workflows.",
+    tech: ["C++", "Strings"],
   },
   {
     title: "Imagify",

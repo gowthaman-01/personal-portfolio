@@ -18,8 +18,8 @@ export const desktopLinks = [
     newTab: true,
   },
   {
-    name: "gowthaman.aravindan@gmail.com",
-    link: "mailto:gowthaman.aravindan@gmail.com",
+    name: "gowthaman.swe@gmail.com",
+    link: "mailto:gowthaman.swe@gmail.com",
     image: "/gmail.png",
     newTab: true,
   },
@@ -56,7 +56,7 @@ export const mobileLinks = [
   },
   {
     name: "Email",
-    link: "mailto:gowthaman.aravindan@gmail.com",
+    link: "mailto:gowthaman.swe@gmail.com",
     image: "/gmail.png",
     newTab: true,
   },

@@ -51,8 +51,8 @@ export const Contact = () => {
         <div>
           <h2 className="secondary-title">Contact Me</h2>
           <p id={width > 1028 ? "contact" : ""} className="section-paragraph">
-            Feel free to to contact me at gowthaman.aravindan@gmail.com or send
-            in a message below!
+            Feel free to to contact me at gowthaman.swe@gmail.com or send in a
+            message below!
           </p>
         </div>
         <div className="w-full grid gap-8 lg:gap-32">
@@ -139,7 +139,7 @@ export const Contact = () => {
                       <p className="text-[16px]">
                         {success
                           ? "Message sent successfully. Thanks for reaching out!"
-                          : "Error: Unable to send message. Please contact me directly at gowthaman.aravindan@gmail.com"}
+                          : "Error: Unable to send message. Please contact me directly at gowthaman.swe@gmail.com"}
                       </p>
                     </Alert>
                   </Grow>
@@ -184,7 +184,7 @@ export const Contact = () => {
                     <p className="text-[16px]">
                       {success
                         ? "Message sent successfully. Thanks for reaching out!"
-                        : "Error: Unable to send message. Please contact me directly at gowthaman.aravindan@gmail.com"}
+                        : "Error: Unable to send message. Please contact me directly at gowthaman.swe@gmail.com"}
                     </p>
                   </Alert>
                 </Grow>

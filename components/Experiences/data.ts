@@ -10,6 +10,7 @@ export const data = [
     description:
       "Interned with the Google Pay Client Infrastructure team to enhance developer productivity by creating tools for UI change visualizations within pull requests.",
     link: "https://about.google/intl/ALL_in/",
+    blog: "https://medium.com/@gowthaman-01/building-the-gpay-preview-tool-at-google-c58bc5d70f8b",
   },
   {
     image: "/govtech.png",
@@ -22,6 +23,7 @@ export const data = [
     description:
       "Contributed to enhancements in the government's SearchSG engine by refining features and improving system responsiveness.",
     link: "https://www.search.gov.sg/",
+    blog: "https://medium.com/@gowthaman-01/building-search-infrastructure-for-the-government-de1c893572ea",
   },
   {
     image: "/zendesk.png",
@@ -34,6 +36,7 @@ export const data = [
     description:
       "Facilitated the transition of Zendesk services from AWS EC2 to Kubernetes, enhancing scalability and service reliability, and augmented a Java-based GraphQL server with new functionalities.",
     link: "https://www.zendesk.com/in/service/messaging/",
+    blog: "https://medium.com/@gowthaman-01/building-infra-bots-and-graphql-mutations-898124639856",
   },
   {
     image: "/kinexcs.svg",

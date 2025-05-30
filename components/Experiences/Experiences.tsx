@@ -26,7 +26,7 @@ export const Experiences = () => {
             <Slide direction="up" triggerOnce key={item.company}>
               <div className="space-y-12 my-16" key={item.company}>
                 <div className="w-full border border-nav p-12 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-                  <div className="mt-2 mb-6 lg:mb-0 relative w-[120px] h-[12    0px] hover:drop-shadow-dim transition duration-300">
+                  <div className="mt-2 mb-6 lg:mb-0 relative w-[120px] hover:drop-shadow-dim transition duration-300">
                     <a target={"_blank"} rel="noreferrer" href={item.link}>
                       <Image
                         src={item.image}
@@ -36,6 +36,22 @@ export const Experiences = () => {
                         alt={item.company}
                       />
                     </a>
+                    {item.blog && (
+                      <div
+                        className={`absolute ${
+                          parseInt(item.width) > 100 ? "top-0" : "top-5"
+                        } left-0 w-full h-full flex items-center justify-center`}
+                      >
+                        <a
+                          target={"_blank"}
+                          rel="noreferrer"
+                          href={item.blog}
+                          className="text-white text-sm font-semibold hover:text-selected-text transition duration-300"
+                        >
+                          View Blog
+                        </a>
+                      </div>
+                    )}
                   </div>
                   <div className="text-center lg:text-left lg:block w-full">
                     <h3 className="text-white text-3xl font-semibold hover:text-selected-text transition duration-300">

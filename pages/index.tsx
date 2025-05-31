@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Waypoint } from "react-waypoint";
+import { useEffect, useState, useRef } from "react";
 import { useScrollDirection } from "react-use-scroll-direction";
 import { useWindowSize } from "usehooks-ts";
 import {
@@ -21,6 +20,15 @@ const Home = () => {
   const { width, height } = useWindowSize();
   const description =
     "Check out my personal website to explore a range of software development projects and my professional experiences with leading tech companies and organizations.";
+
+  const [currentSection, setCurrentSection] = useState("Home");
+  const [headerOpen, setHeaderOpen] = useState(false);
+
+  const homeRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const workRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (scrollDirection === "DOWN") {
       setIsScrollDown(true);
@@ -28,8 +36,33 @@ const Home = () => {
       setIsScrollDown(false);
     }
   }, [width, scrollDirection]);
-  const [currentSection, setCurrentSection] = useState("Home");
-  const [headerOpen, setHeaderOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100; // Add offset to trigger slightly before reaching section
+
+      // Get section positions
+      const homePosition = homeRef.current?.offsetTop ?? 0;
+      const projectsPosition = projectsRef.current?.offsetTop ?? 0;
+      const workPosition = workRef.current?.offsetTop ?? 0;
+      const contactPosition = contactRef.current?.offsetTop ?? 0;
+
+      // Determine current section based on scroll position
+      if (scrollPosition < projectsPosition) {
+        setCurrentSection("Home");
+      } else if (scrollPosition < workPosition) {
+        setCurrentSection("Projects");
+      } else if (scrollPosition < contactPosition) {
+        setCurrentSection("Work");
+      } else {
+        setCurrentSection("Contact");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="desktop">
       <Head>
@@ -46,49 +79,25 @@ const Home = () => {
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
-      {height > 980 ? (
-        <Waypoint
-          onEnter={() => !isScrollDown && setCurrentSection("Home")}
-          onLeave={() => isScrollDown && setCurrentSection("Projects")}
-        >
-          <div>
-            <Hero setCurrentSection={setCurrentSection} />
-          </div>
-        </Waypoint>
-      ) : (
-        <Hero setCurrentSection={setCurrentSection} />
-      )}
 
-      <Waypoint
-        onEnter={() => setCurrentSection("Projects")}
-        onLeave={() =>
-          isScrollDown ? setCurrentSection("Work") : setCurrentSection("Home")
-        }
-      >
-        <div>
-          <Projects />
-        </div>
-      </Waypoint>
+      <div ref={homeRef}>
+        <Hero setCurrentSection={setCurrentSection} />
+      </div>
+
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+
       {width > 1028 && <LinkDesktop />}
-      <Waypoint
-        onLeave={() =>
-          isScrollDown
-            ? setCurrentSection("Contact")
-            : setCurrentSection("Projects")
-        }
-      >
-        <div>
-          <Experiences />
-        </div>
-      </Waypoint>
-      <Waypoint
-        onEnter={() => setCurrentSection("Contact")}
-        onLeave={() => setCurrentSection("Work")}
-      >
-        <div>
-          <Contact />
-        </div>
-      </Waypoint>
+
+      <div ref={workRef}>
+        <Experiences />
+      </div>
+
+      <div ref={contactRef}>
+        <Contact />
+      </div>
+
       {width < 1028 && (
         <div className="p-10">
           <LinkMobile />

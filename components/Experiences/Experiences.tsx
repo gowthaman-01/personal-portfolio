@@ -36,13 +36,6 @@ export const Experiences = () => {
                         alt={item.company}
                       />
                     </a>
-                    {item.blog && (
-                      <div
-                        className={`absolute ${
-                          parseInt(item.width) > 100 ? "top-0" : "top-5"
-                        } left-0 w-full h-full flex items-center justify-center`}
-                      ></div>
-                    )}
                   </div>
                   <div className="text-center lg:text-left lg:block w-full">
                     <h3 className="text-white text-3xl font-semibold hover:text-selected-text transition duration-300">
@@ -50,7 +43,7 @@ export const Experiences = () => {
                         {item.company}
                       </a>
                     </h3>
-                    <div className="flex justify-center lg:justify-start gap-3">
+                    <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:gap-3">
                       <div className="flex justify-center lg:block">
                         <div className="font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2 w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
                           {item.role}

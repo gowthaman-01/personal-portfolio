@@ -41,16 +41,7 @@ export const Experiences = () => {
                         className={`absolute ${
                           parseInt(item.width) > 100 ? "top-0" : "top-5"
                         } left-0 w-full h-full flex items-center justify-center`}
-                      >
-                        <a
-                          target={"_blank"}
-                          rel="noreferrer"
-                          href={item.blog}
-                          className="text-white text-sm font-semibold hover:text-selected-text transition duration-300"
-                        >
-                          View Blog
-                        </a>
-                      </div>
+                      ></div>
                     )}
                   </div>
                   <div className="text-center lg:text-left lg:block w-full">
@@ -59,13 +50,29 @@ export const Experiences = () => {
                         {item.company}
                       </a>
                     </h3>
-                    <div className="flex justify-center lg:block">
-                      <div className="font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2 w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
-                        {item.role}
+                    <div className="flex justify-center lg:justify-start gap-3">
+                      <div className="flex justify-center lg:block">
+                        <div className="font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2 w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
+                          {item.role}
+                        </div>
                       </div>
+                      {item.blog && (
+                        <div className="flex justify-center lg:block">
+                          <div className="cursor-pointer font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2 w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
+                            <a
+                              target={"_blank"}
+                              rel="noreferrer"
+                              href={item.blog}
+                            >
+                              View Blog
+                            </a>
+                          </div>
+                        </div>
+                      )}
                     </div>
+
                     {item.tag1 && (
-                      <div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 my-4">
+                      <div className="cursor-default w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 my-4">
                         <div className="badge">{item.tag1}</div>
                         <div className="badge">{item.tag2}</div>
                       </div>

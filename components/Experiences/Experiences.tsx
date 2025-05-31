@@ -51,15 +51,15 @@ export const Experiences = () => {
                       </div>
                       {item.blog && (
                         <div className="flex justify-center lg:block">
-                          <div className="cursor-pointer font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2 w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
-                            <a
-                              target={"_blank"}
-                              rel="noreferrer"
-                              href={item.blog}
-                            >
+                          <a
+                            target={"_blank"}
+                            rel="noreferrer"
+                            href={item.blog}
+                          >
+                            <div className="cursor-pointer font-poppins py-1 px-4 mt-4 border-solid border-slate-400 border-2 w-fit rounded-xl hover:drop-shadow-gray hover:scale-105 transition duration-300">
                               View Blog
-                            </a>
-                          </div>
+                            </div>
+                          </a>
                         </div>
                       )}
                     </div>

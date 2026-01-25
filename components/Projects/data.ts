@@ -24,17 +24,17 @@ export const data = [
     tech: ["C++", "Strings"],
   },
   {
-    title: "Imagify",
+    title: "Memify",
     image: "/MEME.png",
-    link: "https://meme-generator-ten-sable.vercel.app/",
+    link: "https://memify.gowthaman.app/",
     description:
       "Meme generator engine that utilizes the ImgFlip API, enabling users to craft memes with customizable top and bottom text captions.",
     tech: ["ReactJS", "JavaScript", "HTML", "CSS"],
   },
   {
-    title: "Github Finder",
+    title: "Gitscout",
     image: "/search.png",
-    link: "https://github-finder-sigma-ivory.vercel.app/",
+    link: "https://gitscout.gowthaman.app/",
     description:
       "User-friendly tool to efficiently search and retrieve GitHub usernames and repositories, enhancing developer productivity.",
     tech: ["JavaScript", "HTML", "CSS"],

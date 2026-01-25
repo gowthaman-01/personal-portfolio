@@ -1,5 +1,17 @@
 export const data = [
   {
+    image: "/shopeepay.png",
+    width: "96px",
+    height: "96px",
+    company: "Shopee",
+    tag1: "Back-End Development",
+    tag2: "Payments",
+    role: "Software Engineer",
+    description:
+      "Developing ShopeePay's core acquiring services, which facilitate financial transactions between merchants and payers across 6 regions.",
+    link: "https://shopeepay.com/",
+  },
+  {
     image: "/google.png",
     width: "96px",
     height: "96px",

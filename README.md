@@ -2,4 +2,5 @@
 
 Check out my personal website to explore a range of software development projects and my professional experiences with leading tech companies and organizations.
 
-![screenshot](https://github.com/user-attachments/assets/39d64e90-3dd2-481e-9d8d-860f205eba29)
+<img alt="gowthamanapp" src="https://github.com/user-attachments/assets/4d7b3835-8c7a-4031-ac17-b8a341f75d9e" />
+

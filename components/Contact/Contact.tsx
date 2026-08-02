@@ -1,46 +1,52 @@
-import { Fade } from "react-awesome-reveal";
 import { useWindowSize } from "usehooks-ts";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
-import { Oval } from "react-loader-spinner";
+import { FormEvent, useState } from "react";
 import { Alert, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import Grow from "@mui/material/Grow";
 
 export const Contact = () => {
-  const { width } = useWindowSize();
+  const { width = 0 } = useWindowSize({ initializeWithValue: false });
   const [loadingIndicator, setLoadingIndicator] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [success, setSuccess] = useState(false);
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     setShowMessage(false);
     setLoadingIndicator(true);
     event.preventDefault();
-    emailjs.init(process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY);
+    const form = event.currentTarget;
+    const publicKey = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY;
+    const serviceId = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE;
+    const templateId = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE;
+
+    if (!publicKey || !serviceId || !templateId) {
+      console.error("EmailJS environment variables are not configured.");
+      setLoadingIndicator(false);
+      setSuccess(false);
+      setShowMessage(true);
+      return;
+    }
+
+    const formData = new FormData(form);
     const data = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      message: event.target.message.value,
+      name: String(formData.get("name") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      message: String(formData.get("message") ?? ""),
     };
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE,
-        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
-        data,
-        process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY
-      )
-      .then((response) => {
-        setLoadingIndicator(false);
-        setSuccess(true);
-        setShowMessage(true);
-        console.log("SUCCESS!", response.status, response.text);
-      })
-      .catch((error) => {
-        setLoadingIndicator(false);
-        setSuccess(false);
-        setShowMessage(true);
-        console.log(error);
+
+    try {
+      const response = await emailjs.send(serviceId, templateId, data, {
+        publicKey,
       });
+      setSuccess(true);
+      console.log("SUCCESS!", response.status, response.text);
+    } catch (error) {
+      setSuccess(false);
+      console.error(error);
+    } finally {
+      setLoadingIndicator(false);
+      setShowMessage(true);
+    }
   };
   return (
     <div
@@ -93,7 +99,6 @@ export const Contact = () => {
                 Message
               </label>
               <textarea
-                typeof="text"
                 name="message"
                 required
                 className="w-full rounded border border-input-border bg-input px-4 py-4 h-56 resize-none mb-6 focus:outline-none hover:outline-none hover:border-white transition duration-300"
@@ -107,14 +112,10 @@ export const Contact = () => {
                 >
                   {loadingIndicator ? "Sending" : "Send"}
                   {loadingIndicator && (
-                    <Oval
-                      height={25}
-                      width={25}
-                      color="white"
-                      ariaLabel="oval-loading"
-                      secondaryColor="white"
-                      strokeWidth={5}
-                      strokeWidthSecondary={5}
+                    <span
+                      aria-label="Sending message"
+                      role="status"
+                      className="h-6 w-6 animate-spin rounded-full border-[3px] border-white/40 border-t-white"
                     />
                   )}
                 </button>
@@ -153,14 +154,10 @@ export const Contact = () => {
                 >
                   {loadingIndicator ? "Sending" : "Send"}
                   {loadingIndicator && (
-                    <Oval
-                      height={25}
-                      width={25}
-                      color="white"
-                      ariaLabel="oval-loading"
-                      secondaryColor="white"
-                      strokeWidth={5}
-                      strokeWidthSecondary={5}
+                    <span
+                      aria-label="Sending message"
+                      role="status"
+                      className="h-6 w-6 animate-spin rounded-full border-[3px] border-white/40 border-t-white"
                     />
                   )}
                 </button>

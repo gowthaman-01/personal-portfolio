@@ -3,7 +3,7 @@ import { data } from "./data";
 import { useWindowSize } from "usehooks-ts";
 import { Fade, Slide } from "react-awesome-reveal";
 export const Experiences = () => {
-  const { width } = useWindowSize();
+  const { width = 0 } = useWindowSize({ initializeWithValue: false });
   return (
     <div>
       <div
@@ -30,9 +30,10 @@ export const Experiences = () => {
                     <a target={"_blank"} rel="noreferrer" href={item.link}>
                       <Image
                         src={item.image}
-                        layout="responsive"
-                        width={item?.width}
-                        height={item?.height}
+                        width={item.width}
+                        height={item.height}
+                        className="h-auto w-full"
+                        sizes="120px"
                         alt={item.company}
                       />
                     </a>

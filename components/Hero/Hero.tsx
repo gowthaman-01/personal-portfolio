@@ -7,11 +7,11 @@ const Hero = ({
 }: {
   setCurrentSection: (section: string) => void;
 }) => {
-  const { width } = useWindowSize();
+  const { width = 0 } = useWindowSize({ initializeWithValue: false });
   return (
     <div>
       {width < 1028 ? (
-        <Mobile setCurrentSection={setCurrentSection} />
+        <Mobile />
       ) : (
         <Desktop setCurrentSection={setCurrentSection} />
       )}

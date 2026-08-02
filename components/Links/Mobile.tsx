@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import { mobileLinks } from "./data";
 import { useWindowSize } from "usehooks-ts";
 export const LinkMobile = () => {
-  const { width } = useWindowSize();
+  const { width = 0 } = useWindowSize({ initializeWithValue: false });
   return (
     <>
       {width >= 768 ? (
@@ -18,7 +18,7 @@ export const LinkMobile = () => {
                   target={item.newTab ? "_blank" : ""}
                 >
                   <div className="w-7 h-7 relative hover:drop-shadow-blue transition duration-300">
-                    <Image src={item.image} alt="Man" layout="fill" />
+                    <Image src={item.image} alt={item.name} fill sizes="28px" />
                   </div>
                 </a>
               </div>
@@ -37,7 +37,7 @@ export const LinkMobile = () => {
                   target={item.newTab ? "_blank" : ""}
                 >
                   <div className="w-7 h-7 relative hover:drop-shadow-blue transition duration-300">
-                    <Image src={item.image} alt="Man" layout="fill" />
+                    <Image src={item.image} alt={item.name} fill sizes="28px" />
                   </div>
                 </a>
               </div>

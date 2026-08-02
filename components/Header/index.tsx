@@ -1,6 +1,7 @@
 import Desktop from "./Desktop";
 import Mobile from "./Mobile";
 import { useWindowSize } from "usehooks-ts";
+import type { Dispatch, SetStateAction } from "react";
 
 const Header = ({
   currentSection,
@@ -11,9 +12,9 @@ const Header = ({
   currentSection: string;
   setCurrentSection: (section: string) => void;
   headerOpen: boolean;
-  setHeaderOpen: (param: any) => void;
+  setHeaderOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const { width } = useWindowSize();
+  const { width = 0 } = useWindowSize({ initializeWithValue: false });
   return width > 1028 ? (
     <Desktop
       currentSection={currentSection}

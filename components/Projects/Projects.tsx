@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { data } from "./data";
 import { useWindowSize } from "usehooks-ts";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaGlobe } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {
-  const { width } = useWindowSize();
+  const { width = 0 } = useWindowSize({ initializeWithValue: false });
   const [showInfo, setShowInfo] = useState(true);
   const toggle = () => width < 768 && setShowInfo(true);
 
@@ -39,9 +39,9 @@ const Projects = () => {
           {width > 1028
             ? data.map((project) => (
                 <Fade triggerOnce direction="up" key={project.title}>
-                  <>
-                    <div className="project md:w-[639px] md:h-[432px] lg:w-[400px] lg:h-[270px] xl:w-[355px] xl:h-[240px] 2xl:w-[440px] 2xl:h-[297px] overflow-hidden rounded-md relative hover:transform-gpu hover:scale-105 transition duration-300">
+                  <div className="project md:w-[639px] md:h-[432px] lg:w-[400px] lg:h-[270px] xl:w-[355px] xl:h-[240px] 2xl:w-[440px] 2xl:h-[297px] overflow-hidden rounded-md relative hover:transform-gpu hover:scale-105 transition duration-300">
                       <a
+                        className="relative block h-full w-full"
                         href={project?.link}
                         target="_blank"
                         rel="noreferrer"
@@ -49,7 +49,8 @@ const Projects = () => {
                       >
                         <Image
                           src={project.image}
-                          layout="fill"
+                          fill
+                          sizes="(min-width: 1536px) 440px, (min-width: 1280px) 355px, (min-width: 1024px) 400px, 100vw"
                           alt={project.image}
                         />
                         <span className="bg-nav absolute opacity-0 rounded p-4 h-full">
@@ -71,18 +72,17 @@ const Projects = () => {
                           </p>
                         </span>
                       </a>
-                    </div>
-                  </>
+                  </div>
                 </Fade>
               ))
             : data.map((project) => (
                 <Fade direction="up" triggerOnce key={project.title}>
-                  <>
-                    <div className="project w-[342px] h-[236px] md:w-[639px] md:h-[432px] relative rounded-md overflow-hidden">
-                      <div onClick={toggle}>
+                  <div className="project w-[342px] h-[236px] md:w-[639px] md:h-[432px] relative rounded-md overflow-hidden">
+                      <div className="relative h-full w-full" onClick={toggle}>
                         <Image
                           src={project.image}
-                          layout="fill"
+                          fill
+                          sizes="(min-width: 768px) 639px, 342px"
                           alt={project.image}
                         />
                         {showInfo && (
@@ -119,8 +119,7 @@ const Projects = () => {
                           </span>
                         )}
                       </div>
-                    </div>
-                  </>
+                  </div>
                 </Fade>
               ))}
         </div>

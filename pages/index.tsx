@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import { useScrollDirection } from "react-use-scroll-direction";
 import { useWindowSize } from "usehooks-ts";
 import {
   Header,
@@ -15,9 +14,7 @@ import {
 import Head from "next/head";
 
 const Home = () => {
-  const { scrollDirection } = useScrollDirection();
-  const [isScrollDown, setIsScrollDown] = useState(false);
-  const { width, height } = useWindowSize();
+  const { width = 0 } = useWindowSize({ initializeWithValue: false });
   const description =
     "Check out my personal website to explore a range of software development projects and my professional experiences with leading tech companies and organizations.";
 
@@ -30,19 +27,10 @@ const Home = () => {
   const contactRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (scrollDirection === "DOWN") {
-      setIsScrollDown(true);
-    } else if (scrollDirection === "UP") {
-      setIsScrollDown(false);
-    }
-  }, [width, scrollDirection]);
-
-  useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100; // Add offset to trigger slightly before reaching section
 
       // Get section positions
-      const homePosition = homeRef.current?.offsetTop ?? 0;
       const projectsPosition = projectsRef.current?.offsetTop ?? 0;
       const workPosition = workRef.current?.offsetTop ?? 0;
       const contactPosition = contactRef.current?.offsetTop ?? 0;
@@ -75,10 +63,7 @@ const Home = () => {
         headerOpen={headerOpen}
         setHeaderOpen={setHeaderOpen}
       />
-      <Navbar
-        currentSection={currentSection}
-        setCurrentSection={setCurrentSection}
-      />
+      <Navbar currentSection={currentSection} />
 
       <div ref={homeRef}>
         <Hero setCurrentSection={setCurrentSection} />

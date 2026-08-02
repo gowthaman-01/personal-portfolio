@@ -1,5 +1,3 @@
-import { Fade } from "react-awesome-reveal";
-
 const Code = () => {
   return (
     <div className="pb-6 drop-shadow-sm flex justify-center items-center">

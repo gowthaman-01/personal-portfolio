@@ -17,7 +17,7 @@ export const LinkDesktop = () => {
                 {item.name}
               </span>
               <div className="w-7 h-7 relative hover:drop-shadow-blue transition duration-300">
-                <Image src={item.image} alt="Man" layout="fill" />
+                <Image src={item.image} alt={item.name} fill sizes="28px" />
               </div>
             </a>
           </div>

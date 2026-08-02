@@ -7,6 +7,13 @@ const Desktop = ({
   currentSection: string;
   setCurrentSection: (section: string) => void;
 }) => {
+  const linkClass = (section: string) =>
+    currentSection === section
+      ? "text-selected-text"
+      : "hover:text-selected-text";
+  const linkStyle = (section: string) =>
+    currentSection === section ? { color: "#A3A3FF" } : undefined;
+
   return (
     <Fade direction="down">
       <header className="py-6">
@@ -18,28 +25,51 @@ const Desktop = ({
             gowthaman
           </a>
           <div className="flex items-center">
-            <a href="#" className="text-selected-text xl:mr-12 md:mr-8">
+            <a
+              href="#"
+              onClick={() => setCurrentSection("Home")}
+              aria-current={currentSection === "Home" ? "page" : undefined}
+              style={linkStyle("Home")}
+              className={`${linkClass(
+                "Home"
+              )} transition duration-200 xl:mr-12 md:mr-8`}
+            >
               Home
             </a>
             <a
               href="#projects"
-              className="hover:text-selected-text transition duration-200 xl:mr-12 md:mr-8"
+              onClick={() => setCurrentSection("Projects")}
+              aria-current={
+                currentSection === "Projects" ? "page" : undefined
+              }
+              style={linkStyle("Projects")}
+              className={`${linkClass(
+                "Projects"
+              )} transition duration-200 xl:mr-12 md:mr-8`}
             >
               Projects
             </a>
             <a
               href="#work"
-              className="hover:text-selected-text transition duration-200 xl:mr-12 md:mr-8"
+              onClick={() => setCurrentSection("Work")}
+              aria-current={currentSection === "Work" ? "page" : undefined}
+              style={linkStyle("Work")}
+              className={`${linkClass(
+                "Work"
+              )} transition duration-200 xl:mr-12 md:mr-8`}
             >
               Work
             </a>
-            <a href="#contact">
-              <button className="px-6 py-2 bg-theme font-bold rounded mr-8 hover:drop-shadow-blue transition duration-300">
+            <a
+              href="#contact"
+              onClick={() => setCurrentSection("Contact")}
+            >
+              <button className="cursor-pointer px-6 py-2 bg-theme font-bold rounded mr-8 hover:drop-shadow-blue transition duration-300">
                 Contact
               </button>
             </a>
             <a href="/Gowthaman-Aravindan-Resume.pdf" target={"_blank"}>
-              <button className="px-6 py-2 bg-nav font-bold rounded mr-8 hover:drop-shadow-gray transition duration-300">
+              <button className="cursor-pointer px-6 py-2 bg-nav font-bold rounded mr-8 hover:drop-shadow-gray transition duration-300">
                 Resume
               </button>
             </a>

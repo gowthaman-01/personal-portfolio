@@ -2,14 +2,10 @@ import { navbarData } from "./data";
 import { useWindowSize } from "usehooks-ts";
 import { Fade } from "react-awesome-reveal";
 
-const Navbar = ({
-  currentSection,
-  setCurrentSection,
-}: {
+const Navbar = ({ currentSection }: {
   currentSection: string;
-  setCurrentSection: (section: string) => void;
 }) => {
-  const { width, height } = useWindowSize();
+  const { width = 0 } = useWindowSize({ initializeWithValue: false });
   return (
     <div className={width > 1028 ? "w-4 ml-[55px]  block fixed" : "hidden"}>
       <Fade direction="left">

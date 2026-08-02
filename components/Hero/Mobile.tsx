@@ -3,16 +3,11 @@ import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import gowthaman from "../../public/gowthaman.jpg";
 import { useWindowSize } from "usehooks-ts";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
-import { Fade, Slide } from "react-awesome-reveal";
-const Mobile = ({
-  setCurrentSection,
-}: {
-  setCurrentSection: (section: string) => void;
-}) => {
-  const { width } = useWindowSize();
-  const element = useRef<any>();
-  const typed = useRef<Typed>();
+import { Fade } from "react-awesome-reveal";
+const Mobile = () => {
+  const { width = 0 } = useWindowSize({ initializeWithValue: false });
+  const element = useRef<HTMLParagraphElement>(null);
+  const typed = useRef<Typed | null>(null);
   useEffect(() => {
     const options = {
       strings:
@@ -34,7 +29,7 @@ const Mobile = ({
     <div className="flex justify-center pt-16 lg:pt-0 xl:-mt-4">
       <Fade direction="up" triggerOnce>
         <div className="my-8 md:my-36 xl:my-64 -ml-44 md:ml-8 lg:ml-4 xl:ml-24 2xl:mr-32 relative z-10">
-          <div className="font-bold w-[170px] md:w-[250px] lg:w-[350px] text-3xl md:leading-10 md:text-[44px] lg:text-5xl xl:text-6xl 2xl:text-7xl">
+          <div className="font-bold w-[170px] md:w-[250px] lg:w-[350px] text-3xl md:leading-10 md:text-[44px] lg:text-5xl lg:leading-none xl:text-6xl 2xl:text-7xl">
             <div>
               <p className="hover:text-selected-text transition duration-300">
                 Building
@@ -70,7 +65,13 @@ const Mobile = ({
 
       <div className="absolute md:relative w-[280px] h-[280px] md:w-[450px] md:h-[480px] lg:w-[550px] lg:h-[590px] xl:w-[750px] xl:h-[820px] 2xl:w-[830px] 2xl:h-[900px] ml-16 md:mt-16 md:-ml-20 -z-10">
         <Fade direction="up" triggerOnce>
-          <Image src={gowthaman} alt="Man" className="" layout="responsive" />
+          <Image
+            src={gowthaman}
+            alt="Gowthaman Aravindan"
+            loading="eager"
+            className="h-auto w-full"
+            sizes="(min-width: 1536px) 830px, (min-width: 1280px) 750px, (min-width: 1024px) 550px, (min-width: 768px) 450px, 280px"
+          />
         </Fade>
       </div>
     </div>
